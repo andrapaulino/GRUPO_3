@@ -61,9 +61,3 @@
 #*.PDF   diff=astextplain
 #*.rtf   diff=astextplain
 #*.RTF   diff=astextplain
-
-###############################################################################
-# Set C# as the language for C# files
-###############################################################################
-*.[ch]   linguist-language=csharp
-*.cs     linguist-language=csharp
