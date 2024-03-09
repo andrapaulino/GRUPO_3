@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="UDIE" Class="DbLibraryEntityDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=J-LY\SQLEXPRESS;Initial Catalog=UDIE;Integrated Security=True;Trust Server Certificate=True" SettingsObjectName="capaDATOS.Properties.Settings" SettingsPropertyName="UDIEConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.AlumnosxRecursosAprendizaje" Member="AlumnosxRecursosAprendizaje">
+    <Type Name="AlumnosxRecursosAprendizaje">
+      <Column Name="AlumnoxRecursosAprendizajeID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="AlumnoID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="RecursosAprendizajeID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Acceso" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Comentario" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Descripción" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="Alumnos_AlumnosxRecursosAprendizaje" Member="Alumnos" ThisKey="AlumnoID" OtherKey="AlumnoID" Type="Alumnos" IsForeignKey="true" />
+      <Association Name="RecursosAprendizaje_AlumnosxRecursosAprendizaje" Member="RecursosAprendizaje" ThisKey="RecursosAprendizajeID" OtherKey="RecursosAprendizajeID" Type="RecursosAprendizaje" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Alumnos" Member="Alumnos">
+    <Type Name="Alumnos">
+      <Column Name="AlumnoID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="Identificación" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Association Name="Alumnos_AlumnosxRecursosAprendizaje" Member="AlumnosxRecursosAprendizaje" ThisKey="AlumnoID" OtherKey="AlumnoID" Type="AlumnosxRecursosAprendizaje" />
+      <Association Name="Alumnos_AlumnosxRecursosAprendizaje1" Member="AlumnosxRecursosAprendizaje1" ThisKey="AlumnoID" OtherKey="AlumnoID" Type="AlumnosxRecursosAprendizaje1" />
+      <Association Name="Alumnos_Comunicación" Member="Comunicación" ThisKey="AlumnoID" OtherKey="AlumnoID" Type="Comunicación" />
+      <Association Name="Alumnos_Examenes" Member="Examenes" ThisKey="AlumnoID" OtherKey="AlumnoID" Type="Examenes" />
+      <Association Name="Alumnos_Tareas" Member="Tareas" ThisKey="AlumnoID" OtherKey="AlumnoID" Type="Tareas" />
+    </Type>
+  </Table>
+  <Table Name="dbo.AlumnosxRecursosAprendizaje" Member="AlumnosxRecursosAprendizaje1">
+    <Type Name="AlumnosxRecursosAprendizaje1">
+      <Column Name="AlumnoxRecursosAprendizajeID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="AlumnoID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="RecursosAprendizajeID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Acceso" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Comentario" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Descripción" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="Alumnos_AlumnosxRecursosAprendizaje1" Member="Alumnos" ThisKey="AlumnoID" OtherKey="AlumnoID" Type="Alumnos" IsForeignKey="true" />
+      <Association Name="RecursosAprendizaje_AlumnosxRecursosAprendizaje1" Member="RecursosAprendizaje" ThisKey="RecursosAprendizajeID" OtherKey="RecursosAprendizajeID" Type="RecursosAprendizaje" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CalendarioAcademico" Member="CalendarioAcademico">
+    <Type Name="CalendarioAcademico">
+      <Column Name="CalendarioAcademicoID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Tipo" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Fecha" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="Descripción" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="CalendarioAcademico_CalendarioAcademicoxExamen" Member="CalendarioAcademicoxExamen" ThisKey="CalendarioAcademicoID" OtherKey="CalendarioAcademicoID" Type="CalendarioAcademicoxExamen" />
+      <Association Name="CalendarioAcademico_CalendarioAcademicoxRecursosAprendizaje" Member="CalendarioAcademicoxRecursosAprendizaje" ThisKey="CalendarioAcademicoID" OtherKey="CalendarioAcademicoID" Type="CalendarioAcademicoxRecursosAprendizaje" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CalendarioAcademicoxExamen" Member="CalendarioAcademicoxExamen">
+    <Type Name="CalendarioAcademicoxExamen">
+      <Column Name="CalendarioAcademicoxExamenID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CalendarioAcademicoID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ExamenID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Fecha_Examen" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="Hora_Examen" Type="System.TimeSpan" DbType="Time" CanBeNull="true" />
+      <Association Name="CalendarioAcademico_CalendarioAcademicoxExamen" Member="CalendarioAcademico" ThisKey="CalendarioAcademicoID" OtherKey="CalendarioAcademicoID" Type="CalendarioAcademico" IsForeignKey="true" />
+      <Association Name="Examenes_CalendarioAcademicoxExamen" Member="Examenes" ThisKey="ExamenID" OtherKey="ExamenID" Type="Examenes" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CalendarioAcademicoxRecursosAprendizaje" Member="CalendarioAcademicoxRecursosAprendizaje">
+    <Type Name="CalendarioAcademicoxRecursosAprendizaje">
+      <Column Name="CalendarioAcademicoxRecursosAprendizajeID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CalendarioAcademicoID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="RecursosAprendizajeID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="CalendarioAcademico_CalendarioAcademicoxRecursosAprendizaje" Member="CalendarioAcademico" ThisKey="CalendarioAcademicoID" OtherKey="CalendarioAcademicoID" Type="CalendarioAcademico" IsForeignKey="true" />
+      <Association Name="RecursosAprendizaje_CalendarioAcademicoxRecursosAprendizaje" Member="RecursosAprendizaje" ThisKey="RecursosAprendizajeID" OtherKey="RecursosAprendizajeID" Type="RecursosAprendizaje" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Comunicación" Member="Comunicación">
+    <Type Name="Comunicación">
+      <Column Name="ComunicaciónID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="AlumnoID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CursoID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Contenido" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Fecha" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Descripción" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="Alumnos_Comunicación" Member="Alumnos" ThisKey="AlumnoID" OtherKey="AlumnoID" Type="Alumnos" IsForeignKey="true" />
+      <Association Name="Cursos_Comunicación" Member="Cursos" ThisKey="CursoID" OtherKey="CursoID" Type="Cursos" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Cursos" Member="Cursos">
+    <Type Name="Cursos">
+      <Column Name="CursoID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="Lugar" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="Descripción" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="Cursos_Comunicación" Member="Comunicación" ThisKey="CursoID" OtherKey="CursoID" Type="Comunicación" />
+      <Association Name="Cursos_Examenes" Member="Examenes" ThisKey="CursoID" OtherKey="CursoID" Type="Examenes" />
+      <Association Name="Cursos_ProfesorxCurso" Member="ProfesorxCurso" ThisKey="CursoID" OtherKey="CursoID" Type="ProfesorxCurso" />
+      <Association Name="Cursos_Tareas" Member="Tareas" ThisKey="CursoID" OtherKey="CursoID" Type="Tareas" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Examenes" Member="Examenes">
+    <Type Name="Examenes">
+      <Column Name="ExamenID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="AlumnoID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CursoID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Fecha_Examen" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="Valor" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Descripción" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="Examenes_CalendarioAcademicoxExamen" Member="CalendarioAcademicoxExamen" ThisKey="ExamenID" OtherKey="ExamenID" Type="CalendarioAcademicoxExamen" />
+      <Association Name="Alumnos_Examenes" Member="Alumnos" ThisKey="AlumnoID" OtherKey="AlumnoID" Type="Alumnos" IsForeignKey="true" />
+      <Association Name="Cursos_Examenes" Member="Cursos" ThisKey="CursoID" OtherKey="CursoID" Type="Cursos" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ProfesorxCurso" Member="ProfesorxCurso">
+    <Type Name="ProfesorxCurso">
+      <Column Name="ProfesorxCursoID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ProfesorID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CursoID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Descripción" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="Cursos_ProfesorxCurso" Member="Cursos" ThisKey="CursoID" OtherKey="CursoID" Type="Cursos" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.RecursosAprendizaje" Member="RecursosAprendizaje">
+    <Type Name="RecursosAprendizaje">
+      <Column Name="RecursosAprendizajeID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Tipo" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Formato" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Descripción" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="RecursosAprendizaje_AlumnosxRecursosAprendizaje" Member="AlumnosxRecursosAprendizaje" ThisKey="RecursosAprendizajeID" OtherKey="RecursosAprendizajeID" Type="AlumnosxRecursosAprendizaje" />
+      <Association Name="RecursosAprendizaje_AlumnosxRecursosAprendizaje1" Member="AlumnosxRecursosAprendizaje1" ThisKey="RecursosAprendizajeID" OtherKey="RecursosAprendizajeID" Type="AlumnosxRecursosAprendizaje1" />
+      <Association Name="RecursosAprendizaje_CalendarioAcademicoxRecursosAprendizaje" Member="CalendarioAcademicoxRecursosAprendizaje" ThisKey="RecursosAprendizajeID" OtherKey="RecursosAprendizajeID" Type="CalendarioAcademicoxRecursosAprendizaje" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Tareas" Member="Tareas">
+    <Type Name="Tareas">
+      <Column Name="TareaID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="AlumnoID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CursoID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Fecha_Entrega" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="Valor" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Descripción" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="Alumnos_Tareas" Member="Alumnos" ThisKey="AlumnoID" OtherKey="AlumnoID" Type="Alumnos" IsForeignKey="true" />
+      <Association Name="Cursos_Tareas" Member="Cursos" ThisKey="CursoID" OtherKey="CursoID" Type="Cursos" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>
