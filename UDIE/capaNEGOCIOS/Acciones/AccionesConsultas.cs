@@ -13,6 +13,9 @@ namespace capaNEGOCIOS.Acciones
     {
 
         //metodos de listar
+        public List<Alumnos> listAlumnos()
+        {
+            return dblibcontext.Alumnos.ToList();
+        }
 
-    }
 }
