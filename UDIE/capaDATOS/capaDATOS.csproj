@@ -42,6 +42,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataBase\DbLibraryEntity.cs">
+      <DependentUpon>DbLibraryEntity.dbml</DependentUpon>
+    </Compile>
     <Compile Include="DataBase\DbLibraryEntity.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

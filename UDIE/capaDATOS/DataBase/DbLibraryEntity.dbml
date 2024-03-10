@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="UDIE" Class="DbLibraryEntityDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=J-LY\SQLEXPRESS;Initial Catalog=UDIE;Integrated Security=True;Trust Server Certificate=True" SettingsObjectName="capaDATOS.Properties.Settings" SettingsPropertyName="UDIEConnectionString" Provider="System.Data.SqlClient" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=LEONAL;Initial Catalog=UDIE;Integrated Security=True" SettingsObjectName="capaDATOS.Properties.Settings" SettingsPropertyName="UDIEConnectionString1" Provider="System.Data.SqlClient" />
   <Table Name="dbo.AlumnosxRecursosAprendizaje" Member="AlumnosxRecursosAprendizaje">
     <Type Name="AlumnosxRecursosAprendizaje">
       <Column Name="AlumnoxRecursosAprendizajeID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
@@ -18,22 +18,9 @@
       <Column Name="Nombre" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
       <Column Name="Identificación" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
       <Association Name="Alumnos_AlumnosxRecursosAprendizaje" Member="AlumnosxRecursosAprendizaje" ThisKey="AlumnoID" OtherKey="AlumnoID" Type="AlumnosxRecursosAprendizaje" />
-      <Association Name="Alumnos_AlumnosxRecursosAprendizaje1" Member="AlumnosxRecursosAprendizaje1" ThisKey="AlumnoID" OtherKey="AlumnoID" Type="AlumnosxRecursosAprendizaje1" />
       <Association Name="Alumnos_Comunicación" Member="Comunicación" ThisKey="AlumnoID" OtherKey="AlumnoID" Type="Comunicación" />
       <Association Name="Alumnos_Examenes" Member="Examenes" ThisKey="AlumnoID" OtherKey="AlumnoID" Type="Examenes" />
       <Association Name="Alumnos_Tareas" Member="Tareas" ThisKey="AlumnoID" OtherKey="AlumnoID" Type="Tareas" />
-    </Type>
-  </Table>
-  <Table Name="dbo.AlumnosxRecursosAprendizaje" Member="AlumnosxRecursosAprendizaje1">
-    <Type Name="AlumnosxRecursosAprendizaje1">
-      <Column Name="AlumnoxRecursosAprendizajeID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="AlumnoID" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="RecursosAprendizajeID" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="Acceso" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
-      <Column Name="Comentario" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
-      <Column Name="Descripción" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
-      <Association Name="Alumnos_AlumnosxRecursosAprendizaje1" Member="Alumnos" ThisKey="AlumnoID" OtherKey="AlumnoID" Type="Alumnos" IsForeignKey="true" />
-      <Association Name="RecursosAprendizaje_AlumnosxRecursosAprendizaje1" Member="RecursosAprendizaje" ThisKey="RecursosAprendizajeID" OtherKey="RecursosAprendizajeID" Type="RecursosAprendizaje" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.CalendarioAcademico" Member="CalendarioAcademico">
@@ -110,6 +97,7 @@
       <Column Name="CursoID" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="Descripción" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
       <Association Name="Cursos_ProfesorxCurso" Member="Cursos" ThisKey="CursoID" OtherKey="CursoID" Type="Cursos" IsForeignKey="true" />
+      <Association Name="Profesore_ProfesorxCurso" Member="Profesores" ThisKey="ProfesorID" OtherKey="ProfesorID" Type="Profesores" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.RecursosAprendizaje" Member="RecursosAprendizaje">
@@ -119,7 +107,6 @@
       <Column Name="Formato" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
       <Column Name="Descripción" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
       <Association Name="RecursosAprendizaje_AlumnosxRecursosAprendizaje" Member="AlumnosxRecursosAprendizaje" ThisKey="RecursosAprendizajeID" OtherKey="RecursosAprendizajeID" Type="AlumnosxRecursosAprendizaje" />
-      <Association Name="RecursosAprendizaje_AlumnosxRecursosAprendizaje1" Member="AlumnosxRecursosAprendizaje1" ThisKey="RecursosAprendizajeID" OtherKey="RecursosAprendizajeID" Type="AlumnosxRecursosAprendizaje1" />
       <Association Name="RecursosAprendizaje_CalendarioAcademicoxRecursosAprendizaje" Member="CalendarioAcademicoxRecursosAprendizaje" ThisKey="RecursosAprendizajeID" OtherKey="RecursosAprendizajeID" Type="CalendarioAcademicoxRecursosAprendizaje" />
     </Type>
   </Table>
@@ -133,6 +120,14 @@
       <Column Name="Descripción" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
       <Association Name="Alumnos_Tareas" Member="Alumnos" ThisKey="AlumnoID" OtherKey="AlumnoID" Type="Alumnos" IsForeignKey="true" />
       <Association Name="Cursos_Tareas" Member="Cursos" ThisKey="CursoID" OtherKey="CursoID" Type="Cursos" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Profesores" Member="Profesores">
+    <Type Name="Profesores">
+      <Column Name="ProfesorID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="Cédula" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Association Name="Profesore_ProfesorxCurso" Member="ProfesorxCursos" ThisKey="ProfesorID" OtherKey="ProfesorID" Type="ProfesorxCurso" />
     </Type>
   </Table>
 </Database>

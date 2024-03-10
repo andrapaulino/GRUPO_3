@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Data;
 using capaDATOS.DataBase;
 
 
@@ -11,11 +7,78 @@ namespace capaNEGOCIOS.Acciones
 {
     public class AccionesConsultas : AccionesBases
     {
+        #region Listados Genericos
 
         //metodos de listar
         public List<Alumnos> listAlumnos()
         {
             return dblibcontext.Alumnos.ToList();
         }
+        public List<AlumnosxRecursosAprendizaje> listAlumnosxRecursosAprendizaje()
+        {
+            return dblibcontext.AlumnosxRecursosAprendizaje.ToList();
+        }
+        public List<CalendarioAcademico> listCalendarioAcademico()
+        {
+            return dblibcontext.CalendarioAcademico.ToList();
+        }
+        public List<CalendarioAcademicoxExamen> listCalendarioAcademicoxExamen()
+        {
+            return dblibcontext.CalendarioAcademicoxExamen.ToList();
+        }
+        public List<CalendarioAcademicoxRecursosAprendizaje> CalendarioAcademicoxRecursosAprendizaje()
+        {
+            return dblibcontext.CalendarioAcademicoxRecursosAprendizaje.ToList();
+        }
+        public List<Comunicación> listComunicacion()
+        {
+            return dblibcontext.Comunicación.ToList();
+        }
+        public List<Cursos> listCursos()
+        {
+            return dblibcontext.Cursos.ToList();
+        }
+        public List<Examenes> listExamenes()
+        {
+            return dblibcontext.Examenes.ToList();
+        }
+        public List<Profesores> listProfesores()
+        {
+            return dblibcontext.Profesores.ToList();
+        }
+    
+        public List<ProfesorxCurso> listProfesorxCurso()
+        {
+            return dblibcontext.ProfesorxCurso.ToList();
+        }
+        public List<RecursosAprendizaje> listRecursosAprendizaje()
+        {
+            return dblibcontext.RecursosAprendizaje.ToList();
+        }
+        public List<Tareas> listTareas()
+        {
+            return dblibcontext.Tareas.ToList();
+        }
+        #endregion
 
+        #region Filtros relacionales 
+        public List<Cursos> listCursos(string nombre)
+        {
+            return dblibcontext.Cursos.Where(x => x.Nombre == nombre).ToList();
+        }
+        public List<Profesores> listProfesores(string cedula)
+        {
+            return dblibcontext.Profesores.Where(x => x.Cédula == cedula).ToList();
+        }
+        public List<Alumnos> listAlumnos(string identificacion)
+        {
+            return dblibcontext.Alumnos.Where(x => x.Identificación == identificacion).ToList();
+        }
+        public List<Tareas> listTareas(int alumnoId)
+        {
+            return dblibcontext.Tareas.Where(x => x.AlumnoID == alumnoId).ToList();
+        }
+
+        #endregion
+    }
 }
