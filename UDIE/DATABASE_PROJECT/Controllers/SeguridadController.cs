@@ -17,7 +17,7 @@ namespace DATABASE_PROJECT.Controllers
 
         public ActionResult AccederLogin(string usuario = "", string clave = "") 
         {
-            return View({ "_UsuarioAdm"); //retornar al perfil correspondiente (Funcional, Técnico y Administrador)
+            return View("_UsuarioAdmin"); //retornar al perfil correspondiente (Funcional, Técnico y Administrador)
         }
 
 

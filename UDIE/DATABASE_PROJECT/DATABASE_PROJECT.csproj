@@ -181,6 +181,9 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Mantenimiento\Index.cshtml" />
     <Content Include="Views\Seguridad\Login.cshtml" />
+    <Content Include="Views\Seguridad\_UsuarioFuncional.cshtml" />
+    <Content Include="Views\Seguridad\_UsuarioTecnico.cshtml" />
+    <Content Include="Views\Seguridad\_UsuarioAdmin.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
