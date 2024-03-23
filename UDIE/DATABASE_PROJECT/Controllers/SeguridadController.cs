@@ -13,5 +13,10 @@ namespace DATABASE_PROJECT.Controllers
         {
             return View();
         }
+
+        public ActionResult AccederLogin(string usuario = "", string clave = "") 
+        {
+            return View(); //retornar al perfil correspondiente (Funcional, Técnico y Administrador)
+        }
     }
 }
