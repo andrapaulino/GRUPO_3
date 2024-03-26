@@ -1,17 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="UDIE" Class="DbLibraryEntityDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=LEONAL;Initial Catalog=UDIE;Integrated Security=True" SettingsObjectName="capaDATOS.Properties.Settings" SettingsPropertyName="UDIEConnectionString1" Provider="System.Data.SqlClient" />
-  <Table Name="dbo.AlumnosxRecursosAprendizaje" Member="AlumnosxRecursosAprendizaje">
-    <Type Name="AlumnosxRecursosAprendizaje">
-      <Column Name="AlumnoxRecursosAprendizajeID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="AlumnoID" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="RecursosAprendizajeID" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="Acceso" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
-      <Column Name="Comentario" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
-      <Column Name="Descripción" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
-      <Association Name="Alumnos_AlumnosxRecursosAprendizaje" Member="Alumnos" ThisKey="AlumnoID" OtherKey="AlumnoID" Type="Alumnos" IsForeignKey="true" />
-      <Association Name="RecursosAprendizaje_AlumnosxRecursosAprendizaje" Member="RecursosAprendizaje" ThisKey="RecursosAprendizajeID" OtherKey="RecursosAprendizajeID" Type="RecursosAprendizaje" IsForeignKey="true" />
-    </Type>
-  </Table>
+  <Connection Mode="AppSettings" ConnectionString="Data Source=J-LY\SQLEXPRESS;Initial Catalog=UDIE;Integrated Security=True;Trust Server Certificate=True" SettingsObjectName="capaDATOS.Properties.Settings" SettingsPropertyName="UDIEConnectionString" Provider="System.Data.SqlClient" />
   <Table Name="dbo.Alumnos" Member="Alumnos">
     <Type Name="Alumnos">
       <Column Name="AlumnoID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
@@ -21,6 +9,46 @@
       <Association Name="Alumnos_Comunicación" Member="Comunicación" ThisKey="AlumnoID" OtherKey="AlumnoID" Type="Comunicación" />
       <Association Name="Alumnos_Examenes" Member="Examenes" ThisKey="AlumnoID" OtherKey="AlumnoID" Type="Examenes" />
       <Association Name="Alumnos_Tareas" Member="Tareas" ThisKey="AlumnoID" OtherKey="AlumnoID" Type="Tareas" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Alumnos" Member="Alumnos1">
+    <Type Name="Alumnos1">
+      <Column Name="AlumnoID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="Identificación" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Association Name="Alumnos1_AlumnosxRecursosAprendizaje" Member="AlumnosxRecursosAprendizaje" ThisKey="AlumnoID" OtherKey="AlumnoID" Type="AlumnosxRecursosAprendizaje" />
+      <Association Name="Alumnos1_Comunicación" Member="Comunicación" ThisKey="AlumnoID" OtherKey="AlumnoID" Type="Comunicación" />
+      <Association Name="Alumnos1_Examenes" Member="Examenes" ThisKey="AlumnoID" OtherKey="AlumnoID" Type="Examenes" />
+      <Association Name="Alumnos1_Tareas" Member="Tareas" ThisKey="AlumnoID" OtherKey="AlumnoID" Type="Tareas" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TM_Usuario" Member="TM_Usuario">
+    <Type Name="TM_Usuario">
+      <Column Name="IdUser" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="PasswordUser" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="CreateBy" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="ModifyBy" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="CancelBy" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="FecCreate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="FecModify" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="FecCancel" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="FlagActivo" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="TM_Usuario_TD_Login" Member="TD_Login" ThisKey="IdUser" OtherKey="IdUser" Type="TD_Login" />
+      <Association Name="TM_Usuario_TD_RolesxUsuario" Member="TD_RolesxUsuario" ThisKey="IdUser" OtherKey="IdUser" Type="TD_RolesxUsuario" />
+    </Type>
+  </Table>
+  <Table Name="dbo.AlumnosxRecursosAprendizaje" Member="AlumnosxRecursosAprendizaje">
+    <Type Name="AlumnosxRecursosAprendizaje">
+      <Column Name="AlumnoxRecursosAprendizajeID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="AlumnoID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="RecursosAprendizajeID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Acceso" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Comentario" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Descripción" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="Alumnos_AlumnosxRecursosAprendizaje" Member="Alumnos" ThisKey="AlumnoID" OtherKey="AlumnoID" Type="Alumnos" IsForeignKey="true" />
+      <Association Name="Alumnos1_AlumnosxRecursosAprendizaje" Member="Alumnos1" ThisKey="AlumnoID" OtherKey="AlumnoID" Type="Alumnos1" IsForeignKey="true" />
+      <Association Name="RecursosAprendizaje_AlumnosxRecursosAprendizaje" Member="RecursosAprendizaje" ThisKey="RecursosAprendizajeID" OtherKey="RecursosAprendizajeID" Type="RecursosAprendizaje" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.CalendarioAcademico" Member="CalendarioAcademico">
@@ -62,6 +90,7 @@
       <Column Name="Fecha" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
       <Column Name="Descripción" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
       <Association Name="Alumnos_Comunicación" Member="Alumnos" ThisKey="AlumnoID" OtherKey="AlumnoID" Type="Alumnos" IsForeignKey="true" />
+      <Association Name="Alumnos1_Comunicación" Member="Alumnos1" ThisKey="AlumnoID" OtherKey="AlumnoID" Type="Alumnos1" IsForeignKey="true" />
       <Association Name="Cursos_Comunicación" Member="Cursos" ThisKey="CursoID" OtherKey="CursoID" Type="Cursos" IsForeignKey="true" />
     </Type>
   </Table>
@@ -87,7 +116,16 @@
       <Column Name="Descripción" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
       <Association Name="Examenes_CalendarioAcademicoxExamen" Member="CalendarioAcademicoxExamen" ThisKey="ExamenID" OtherKey="ExamenID" Type="CalendarioAcademicoxExamen" />
       <Association Name="Alumnos_Examenes" Member="Alumnos" ThisKey="AlumnoID" OtherKey="AlumnoID" Type="Alumnos" IsForeignKey="true" />
+      <Association Name="Alumnos1_Examenes" Member="Alumnos1" ThisKey="AlumnoID" OtherKey="AlumnoID" Type="Alumnos1" IsForeignKey="true" />
       <Association Name="Cursos_Examenes" Member="Cursos" ThisKey="CursoID" OtherKey="CursoID" Type="Cursos" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Profesores" Member="Profesores">
+    <Type Name="Profesores">
+      <Column Name="ProfesorID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="Cédula" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Association Name="Profesores_ProfesorxCurso" Member="ProfesorxCurso" ThisKey="ProfesorID" OtherKey="ProfesorID" Type="ProfesorxCurso" />
     </Type>
   </Table>
   <Table Name="dbo.ProfesorxCurso" Member="ProfesorxCurso">
@@ -97,7 +135,7 @@
       <Column Name="CursoID" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="Descripción" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
       <Association Name="Cursos_ProfesorxCurso" Member="Cursos" ThisKey="CursoID" OtherKey="CursoID" Type="Cursos" IsForeignKey="true" />
-      <Association Name="Profesore_ProfesorxCurso" Member="Profesores" ThisKey="ProfesorID" OtherKey="ProfesorID" Type="Profesores" IsForeignKey="true" />
+      <Association Name="Profesores_ProfesorxCurso" Member="Profesores" ThisKey="ProfesorID" OtherKey="ProfesorID" Type="Profesores" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.RecursosAprendizaje" Member="RecursosAprendizaje">
@@ -119,15 +157,62 @@
       <Column Name="Valor" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="Descripción" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
       <Association Name="Alumnos_Tareas" Member="Alumnos" ThisKey="AlumnoID" OtherKey="AlumnoID" Type="Alumnos" IsForeignKey="true" />
+      <Association Name="Alumnos1_Tareas" Member="Alumnos1" ThisKey="AlumnoID" OtherKey="AlumnoID" Type="Alumnos1" IsForeignKey="true" />
       <Association Name="Cursos_Tareas" Member="Cursos" ThisKey="CursoID" OtherKey="CursoID" Type="Cursos" IsForeignKey="true" />
     </Type>
   </Table>
-  <Table Name="dbo.Profesores" Member="Profesores">
-    <Type Name="Profesores">
-      <Column Name="ProfesorID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="Nombre" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
-      <Column Name="Cédula" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
-      <Association Name="Profesore_ProfesorxCurso" Member="ProfesorxCursos" ThisKey="ProfesorID" OtherKey="ProfesorID" Type="ProfesorxCurso" />
+  <Table Name="dbo.TD_Login" Member="TD_Login">
+    <Type Name="TD_Login">
+      <Column Name="IdLogin" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IdUser" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="url_login" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="CreateBy" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="ModifyBy" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="CancelBy" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="FecCreate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="FecModify" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="FecCancel" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="FlagActivo" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="TM_Usuario_TD_Login" Member="TM_Usuario" ThisKey="IdUser" OtherKey="IdUser" Type="TM_Usuario" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TD_RolesxUsuario" Member="TD_RolesxUsuario">
+    <Type Name="TD_RolesxUsuario">
+      <Column Name="IdRolesxUsuario" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IdRoles" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IdUser" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CreateBy" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="ModifyBy" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="CancelBy" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="FecCreate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="FecModify" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="FecCancel" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="FlagActivo" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="TM_Usuario_TD_RolesxUsuario" Member="TM_Usuario" ThisKey="IdUser" OtherKey="IdUser" Type="TM_Usuario" IsForeignKey="true" />
+      <Association Name="TM_Roles_TD_RolesxUsuario" Member="TM_Roles" ThisKey="IdRoles" OtherKey="IdRoles" Type="TM_Roles" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TM_Roles" Member="TM_Roles">
+    <Type Name="TM_Roles">
+      <Column Name="IdRoles" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Descripcion" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="CreateBy" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="ModifyBy" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="CancelBy" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="FecCreate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="FecModify" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="FecCancel" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="FlagActivo" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="TM_Roles_TD_RolesxUsuario" Member="TD_RolesxUsuario" ThisKey="IdRoles" OtherKey="IdRoles" Type="TD_RolesxUsuario" />
+    </Type>
+  </Table>
+  <Table Name="dbo.vw_Usuarios" Member="vw_Usuarios">
+    <Type Name="vw_Usuarios">
+      <Column Name="codUsuario" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="nomUsuario" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="EstatusUsuario" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="perfilUsuario" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="EstatusLogin" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
     </Type>
   </Table>
 </Database>

@@ -1,6 +1,8 @@
-﻿using System;
+﻿using capaNEGOCIOS.Acciones;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Timers;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.UI.WebControls;
@@ -9,15 +11,33 @@ namespace DATABASE_PROJECT.Controllers
 {
     public class SeguridadController : Controller
     {
+
+        public AccionSeguridad accionSeguridad = new AccionSeguridad();
+
         // GET: Seguridad
         public ActionResult Login()
         {
             return View();
         }
 
-        public ActionResult AccederLogin(string usuario = "", string clave = "") 
+        public ActionResult btnIniciarSesion(string usuario = "", string clave = "") 
         {
-            return View("_UsuarioAdmin"); //retornar al perfil correspondiente (Funcional, Técnico y Administrador)
+            string vista = string.Empty;
+           if (accionSeguridad.AutheticationUser(usuario, clave))
+            {
+
+                vista = accionSeguridad.GetProfileUsers(usuario);
+            
+            }
+            else
+            {
+
+
+
+            }
+
+
+            return View("_UsuarioFuncional");
         }
 
 
