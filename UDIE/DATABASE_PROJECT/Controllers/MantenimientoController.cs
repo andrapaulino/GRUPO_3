@@ -11,7 +11,10 @@ namespace DATABASE_PROJECT.Controllers
         // GET: Mantenimiento
         public ActionResult Index()
         {
-            return View();
+
+            var operaciones = mantenimientos.ListaOperacionSistema();
+
+            return View(operaciones);
         }
     }
 }
