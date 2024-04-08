@@ -12,9 +12,18 @@ namespace DATABASE_PROJECT.Controllers
         public ActionResult Index()
         {
 
-            var operaciones = mantenimientos.ListaOperacionSistema();
+            VM_Operaciones oper = new VM_Operaciones();
+
+            oper._Operaciones = mantenimientos.ListaOperacionSistema();
 
             return View(operaciones);
+        }
+
+        public ActionResult MantenimientoTablas() 
+        
+        {
+            return View();
+        
         }
     }
 }
