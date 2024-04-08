@@ -9,8 +9,8 @@ namespace capaMODELO.V_Model
 {
     public class VM_Operaciones
     {
-        public List<TM_OperacionSistema> _Operaciones;
-        public List<TM_Usuario> _Usuarios;
+        public List<TM_OperacionSistema> _tblOperaciones;
+        public List<TM_Usuario> _tblUsuarios;
     
     }
 }

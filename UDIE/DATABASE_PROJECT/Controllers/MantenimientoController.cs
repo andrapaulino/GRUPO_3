@@ -14,16 +14,14 @@ namespace DATABASE_PROJECT.Controllers
 
             VM_Operaciones oper = new VM_Operaciones();
 
-            oper._Operaciones = mantenimientos.ListaOperacionSistema();
+            oper._tblOperaciones = mantenimientos.ListaOperacionSistema();
 
             return View(operaciones);
         }
-
-        public ActionResult MantenimientoTablas() 
-        
+          
+        public ActionResult MantenimientoTablas()
         {
             return View();
-        
         }
     }
 }
