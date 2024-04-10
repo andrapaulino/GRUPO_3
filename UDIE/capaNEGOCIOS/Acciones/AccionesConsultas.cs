@@ -7,7 +7,15 @@ namespace capaNEGOCIOS.Acciones
 {
     public class AccionesConsultas : AccionesBases
     {
-        public List<mEstatus> ListarEstados()
+        public List<mEstatus>ListarEstados()
+
+
+
+        public List<TM_OperacionSistema>ListaOperacionSistema()
+        {
+            var lista = dblibcontext.TM_OperacionSistemas.ToList();
+            return lista == null ? new List<TM_OperacionSistema>() : lista;
+        }
         #region Listados Genericos
 
         //metodos de listar
@@ -85,7 +93,7 @@ namespace capaNEGOCIOS.Acciones
         public List<TM_OperacionSistema> ListaOperacionesSistema()
         {
 
-            var lista = _DbEnlace.TM_OperacionSistemas.ToList()
+            var lista = _DbEnlace.TM_OperacionSistemas.ToList();
             return lista == null ? new List<TM_OperacionSistema>() : lista;
         }
 

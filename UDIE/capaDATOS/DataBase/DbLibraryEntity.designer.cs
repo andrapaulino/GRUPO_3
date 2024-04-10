@@ -23,22 +23,16 @@ namespace capaDATOS.DataBase
 	
 	
 	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="UDIE")]
-	public partial class DbLibraryEntityDataContext : System.Data.Linq.DataContext
+	public partial class DblibraryentityDataContext : System.Data.Linq.DataContext
 	{
 		
 		private static System.Data.Linq.Mapping.MappingSource mappingSource = new AttributeMappingSource();
 		
     #region Extensibility Method Definitions
     partial void OnCreated();
-    partial void InsertAlumnos(Alumnos instance);
-    partial void UpdateAlumnos(Alumnos instance);
-    partial void DeleteAlumnos(Alumnos instance);
-    partial void InsertAlumnos1(Alumnos1 instance);
-    partial void UpdateAlumnos1(Alumnos1 instance);
-    partial void DeleteAlumnos1(Alumnos1 instance);
-    partial void InsertTM_Usuario(TM_Usuario instance);
-    partial void UpdateTM_Usuario(TM_Usuario instance);
-    partial void DeleteTM_Usuario(TM_Usuario instance);
+    partial void InsertAlumno(Alumno instance);
+    partial void UpdateAlumno(Alumno instance);
+    partial void DeleteAlumno(Alumno instance);
     partial void InsertAlumnosxRecursosAprendizaje(AlumnosxRecursosAprendizaje instance);
     partial void UpdateAlumnosxRecursosAprendizaje(AlumnosxRecursosAprendizaje instance);
     partial void DeleteAlumnosxRecursosAprendizaje(AlumnosxRecursosAprendizaje instance);
@@ -54,93 +48,80 @@ namespace capaDATOS.DataBase
     partial void InsertComunicación(Comunicación instance);
     partial void UpdateComunicación(Comunicación instance);
     partial void DeleteComunicación(Comunicación instance);
-    partial void InsertCursos(Cursos instance);
-    partial void UpdateCursos(Cursos instance);
-    partial void DeleteCursos(Cursos instance);
-    partial void InsertExamenes(Examenes instance);
-    partial void UpdateExamenes(Examenes instance);
-    partial void DeleteExamenes(Examenes instance);
-    partial void InsertProfesores(Profesores instance);
-    partial void UpdateProfesores(Profesores instance);
-    partial void DeleteProfesores(Profesores instance);
+    partial void InsertCurso(Curso instance);
+    partial void UpdateCurso(Curso instance);
+    partial void DeleteCurso(Curso instance);
+    partial void InsertExamene(Examene instance);
+    partial void UpdateExamene(Examene instance);
+    partial void DeleteExamene(Examene instance);
+    partial void InsertProfesore(Profesore instance);
+    partial void UpdateProfesore(Profesore instance);
+    partial void DeleteProfesore(Profesore instance);
     partial void InsertProfesorxCurso(ProfesorxCurso instance);
     partial void UpdateProfesorxCurso(ProfesorxCurso instance);
     partial void DeleteProfesorxCurso(ProfesorxCurso instance);
     partial void InsertRecursosAprendizaje(RecursosAprendizaje instance);
     partial void UpdateRecursosAprendizaje(RecursosAprendizaje instance);
     partial void DeleteRecursosAprendizaje(RecursosAprendizaje instance);
-    partial void InsertTareas(Tareas instance);
-    partial void UpdateTareas(Tareas instance);
-    partial void DeleteTareas(Tareas instance);
+    partial void InsertTarea(Tarea instance);
+    partial void UpdateTarea(Tarea instance);
+    partial void DeleteTarea(Tarea instance);
     partial void InsertTD_Login(TD_Login instance);
     partial void UpdateTD_Login(TD_Login instance);
     partial void DeleteTD_Login(TD_Login instance);
     partial void InsertTD_RolesxUsuario(TD_RolesxUsuario instance);
     partial void UpdateTD_RolesxUsuario(TD_RolesxUsuario instance);
     partial void DeleteTD_RolesxUsuario(TD_RolesxUsuario instance);
-    partial void InsertTM_Roles(TM_Roles instance);
-    partial void UpdateTM_Roles(TM_Roles instance);
-    partial void DeleteTM_Roles(TM_Roles instance);
     partial void InsertTM_OperacionSistema(TM_OperacionSistema instance);
     partial void UpdateTM_OperacionSistema(TM_OperacionSistema instance);
     partial void DeleteTM_OperacionSistema(TM_OperacionSistema instance);
+    partial void InsertTM_Role(TM_Role instance);
+    partial void UpdateTM_Role(TM_Role instance);
+    partial void DeleteTM_Role(TM_Role instance);
+    partial void InsertTM_Usuario(TM_Usuario instance);
+    partial void UpdateTM_Usuario(TM_Usuario instance);
+    partial void DeleteTM_Usuario(TM_Usuario instance);
     #endregion
 		
-		public DbLibraryEntityDataContext() : 
-				base(global::capaDATOS.Properties.Settings.Default.UDIEConnectionString2, mappingSource)
+		public DblibraryentityDataContext() : 
+				base(global::capaDATOS.Properties.Settings.Default.UDIEConnectionString3, mappingSource)
 		{
 			OnCreated();
 		}
 		
-		public DbLibraryEntityDataContext(string connection) : 
+		public DblibraryentityDataContext(string connection) : 
 				base(connection, mappingSource)
 		{
 			OnCreated();
 		}
 		
-		public DbLibraryEntityDataContext(System.Data.IDbConnection connection) : 
+		public DblibraryentityDataContext(System.Data.IDbConnection connection) : 
 				base(connection, mappingSource)
 		{
 			OnCreated();
 		}
 		
-		public DbLibraryEntityDataContext(string connection, System.Data.Linq.Mapping.MappingSource mappingSource) : 
+		public DblibraryentityDataContext(string connection, System.Data.Linq.Mapping.MappingSource mappingSource) : 
 				base(connection, mappingSource)
 		{
 			OnCreated();
 		}
 		
-		public DbLibraryEntityDataContext(System.Data.IDbConnection connection, System.Data.Linq.Mapping.MappingSource mappingSource) : 
+		public DblibraryentityDataContext(System.Data.IDbConnection connection, System.Data.Linq.Mapping.MappingSource mappingSource) : 
 				base(connection, mappingSource)
 		{
 			OnCreated();
 		}
 		
-		public System.Data.Linq.Table<Alumnos> Alumnos
+		public System.Data.Linq.Table<Alumno> Alumnos
 		{
 			get
 			{
-				return this.GetTable<Alumnos>();
+				return this.GetTable<Alumno>();
 			}
 		}
 		
-		public System.Data.Linq.Table<Alumnos1> Alumnos1
-		{
-			get
-			{
-				return this.GetTable<Alumnos1>();
-			}
-		}
-		
-		public System.Data.Linq.Table<TM_Usuario> TM_Usuario
-		{
-			get
-			{
-				return this.GetTable<TM_Usuario>();
-			}
-		}
-		
-		public System.Data.Linq.Table<AlumnosxRecursosAprendizaje> AlumnosxRecursosAprendizaje
+		public System.Data.Linq.Table<AlumnosxRecursosAprendizaje> AlumnosxRecursosAprendizajes
 		{
 			get
 			{
@@ -148,7 +129,7 @@ namespace capaDATOS.DataBase
 			}
 		}
 		
-		public System.Data.Linq.Table<CalendarioAcademico> CalendarioAcademico
+		public System.Data.Linq.Table<CalendarioAcademico> CalendarioAcademicos
 		{
 			get
 			{
@@ -156,7 +137,7 @@ namespace capaDATOS.DataBase
 			}
 		}
 		
-		public System.Data.Linq.Table<CalendarioAcademicoxExamen> CalendarioAcademicoxExamen
+		public System.Data.Linq.Table<CalendarioAcademicoxExamen> CalendarioAcademicoxExamens
 		{
 			get
 			{
@@ -164,7 +145,7 @@ namespace capaDATOS.DataBase
 			}
 		}
 		
-		public System.Data.Linq.Table<CalendarioAcademicoxRecursosAprendizaje> CalendarioAcademicoxRecursosAprendizaje
+		public System.Data.Linq.Table<CalendarioAcademicoxRecursosAprendizaje> CalendarioAcademicoxRecursosAprendizajes
 		{
 			get
 			{
@@ -172,7 +153,7 @@ namespace capaDATOS.DataBase
 			}
 		}
 		
-		public System.Data.Linq.Table<Comunicación> Comunicación
+		public System.Data.Linq.Table<Comunicación> Comunicacións
 		{
 			get
 			{
@@ -180,31 +161,31 @@ namespace capaDATOS.DataBase
 			}
 		}
 		
-		public System.Data.Linq.Table<Cursos> Cursos
+		public System.Data.Linq.Table<Curso> Cursos
 		{
 			get
 			{
-				return this.GetTable<Cursos>();
+				return this.GetTable<Curso>();
 			}
 		}
 		
-		public System.Data.Linq.Table<Examenes> Examenes
+		public System.Data.Linq.Table<Examene> Examenes
 		{
 			get
 			{
-				return this.GetTable<Examenes>();
+				return this.GetTable<Examene>();
 			}
 		}
 		
-		public System.Data.Linq.Table<Profesores> Profesores
+		public System.Data.Linq.Table<Profesore> Profesores
 		{
 			get
 			{
-				return this.GetTable<Profesores>();
+				return this.GetTable<Profesore>();
 			}
 		}
 		
-		public System.Data.Linq.Table<ProfesorxCurso> ProfesorxCurso
+		public System.Data.Linq.Table<ProfesorxCurso> ProfesorxCursos
 		{
 			get
 			{
@@ -212,7 +193,7 @@ namespace capaDATOS.DataBase
 			}
 		}
 		
-		public System.Data.Linq.Table<RecursosAprendizaje> RecursosAprendizaje
+		public System.Data.Linq.Table<RecursosAprendizaje> RecursosAprendizajes
 		{
 			get
 			{
@@ -220,15 +201,15 @@ namespace capaDATOS.DataBase
 			}
 		}
 		
-		public System.Data.Linq.Table<Tareas> Tareas
+		public System.Data.Linq.Table<Tarea> Tareas
 		{
 			get
 			{
-				return this.GetTable<Tareas>();
+				return this.GetTable<Tarea>();
 			}
 		}
 		
-		public System.Data.Linq.Table<TD_Login> TD_Login
+		public System.Data.Linq.Table<TD_Login> TD_Logins
 		{
 			get
 			{
@@ -236,27 +217,11 @@ namespace capaDATOS.DataBase
 			}
 		}
 		
-		public System.Data.Linq.Table<TD_RolesxUsuario> TD_RolesxUsuario
+		public System.Data.Linq.Table<TD_RolesxUsuario> TD_RolesxUsuarios
 		{
 			get
 			{
 				return this.GetTable<TD_RolesxUsuario>();
-			}
-		}
-		
-		public System.Data.Linq.Table<TM_Roles> TM_Roles
-		{
-			get
-			{
-				return this.GetTable<TM_Roles>();
-			}
-		}
-		
-		public System.Data.Linq.Table<vw_Usuarios> vw_Usuarios
-		{
-			get
-			{
-				return this.GetTable<vw_Usuarios>();
 			}
 		}
 		
@@ -267,10 +232,26 @@ namespace capaDATOS.DataBase
 				return this.GetTable<TM_OperacionSistema>();
 			}
 		}
+		
+		public System.Data.Linq.Table<TM_Role> TM_Roles
+		{
+			get
+			{
+				return this.GetTable<TM_Role>();
+			}
+		}
+		
+		public System.Data.Linq.Table<TM_Usuario> TM_Usuarios
+		{
+			get
+			{
+				return this.GetTable<TM_Usuario>();
+			}
+		}
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Alumnos")]
-	public partial class Alumnos : INotifyPropertyChanging, INotifyPropertyChanged
+	public partial class Alumno : INotifyPropertyChanging, INotifyPropertyChanged
 	{
 		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
@@ -281,13 +262,13 @@ namespace capaDATOS.DataBase
 		
 		private string _Identificación;
 		
-		private EntitySet<AlumnosxRecursosAprendizaje> _AlumnosxRecursosAprendizaje;
+		private EntitySet<AlumnosxRecursosAprendizaje> _AlumnosxRecursosAprendizajes;
 		
-		private EntitySet<Comunicación> _Comunicación;
+		private EntitySet<Comunicación> _Comunicacións;
 		
-		private EntitySet<Examenes> _Examenes;
+		private EntitySet<Examene> _Examenes;
 		
-		private EntitySet<Tareas> _Tareas;
+		private EntitySet<Tarea> _Tareas;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
@@ -301,12 +282,12 @@ namespace capaDATOS.DataBase
     partial void OnIdentificaciónChanged();
     #endregion
 		
-		public Alumnos()
+		public Alumno()
 		{
-			this._AlumnosxRecursosAprendizaje = new EntitySet<AlumnosxRecursosAprendizaje>(new Action<AlumnosxRecursosAprendizaje>(this.attach_AlumnosxRecursosAprendizaje), new Action<AlumnosxRecursosAprendizaje>(this.detach_AlumnosxRecursosAprendizaje));
-			this._Comunicación = new EntitySet<Comunicación>(new Action<Comunicación>(this.attach_Comunicación), new Action<Comunicación>(this.detach_Comunicación));
-			this._Examenes = new EntitySet<Examenes>(new Action<Examenes>(this.attach_Examenes), new Action<Examenes>(this.detach_Examenes));
-			this._Tareas = new EntitySet<Tareas>(new Action<Tareas>(this.attach_Tareas), new Action<Tareas>(this.detach_Tareas));
+			this._AlumnosxRecursosAprendizajes = new EntitySet<AlumnosxRecursosAprendizaje>(new Action<AlumnosxRecursosAprendizaje>(this.attach_AlumnosxRecursosAprendizajes), new Action<AlumnosxRecursosAprendizaje>(this.detach_AlumnosxRecursosAprendizajes));
+			this._Comunicacións = new EntitySet<Comunicación>(new Action<Comunicación>(this.attach_Comunicacións), new Action<Comunicación>(this.detach_Comunicacións));
+			this._Examenes = new EntitySet<Examene>(new Action<Examene>(this.attach_Examenes), new Action<Examene>(this.detach_Examenes));
+			this._Tareas = new EntitySet<Tarea>(new Action<Tarea>(this.attach_Tareas), new Action<Tarea>(this.detach_Tareas));
 			OnCreated();
 		}
 		
@@ -370,34 +351,34 @@ namespace capaDATOS.DataBase
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Alumnos_AlumnosxRecursosAprendizaje", Storage="_AlumnosxRecursosAprendizaje", ThisKey="AlumnoID", OtherKey="AlumnoID")]
-		public EntitySet<AlumnosxRecursosAprendizaje> AlumnosxRecursosAprendizaje
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Alumno_AlumnosxRecursosAprendizaje", Storage="_AlumnosxRecursosAprendizajes", ThisKey="AlumnoID", OtherKey="AlumnoID")]
+		public EntitySet<AlumnosxRecursosAprendizaje> AlumnosxRecursosAprendizajes
 		{
 			get
 			{
-				return this._AlumnosxRecursosAprendizaje;
+				return this._AlumnosxRecursosAprendizajes;
 			}
 			set
 			{
-				this._AlumnosxRecursosAprendizaje.Assign(value);
+				this._AlumnosxRecursosAprendizajes.Assign(value);
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Alumnos_Comunicación", Storage="_Comunicación", ThisKey="AlumnoID", OtherKey="AlumnoID")]
-		public EntitySet<Comunicación> Comunicación
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Alumno_Comunicación", Storage="_Comunicacións", ThisKey="AlumnoID", OtherKey="AlumnoID")]
+		public EntitySet<Comunicación> Comunicacións
 		{
 			get
 			{
-				return this._Comunicación;
+				return this._Comunicacións;
 			}
 			set
 			{
-				this._Comunicación.Assign(value);
+				this._Comunicacións.Assign(value);
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Alumnos_Examenes", Storage="_Examenes", ThisKey="AlumnoID", OtherKey="AlumnoID")]
-		public EntitySet<Examenes> Examenes
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Alumno_Examene", Storage="_Examenes", ThisKey="AlumnoID", OtherKey="AlumnoID")]
+		public EntitySet<Examene> Examenes
 		{
 			get
 			{
@@ -409,8 +390,8 @@ namespace capaDATOS.DataBase
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Alumnos_Tareas", Storage="_Tareas", ThisKey="AlumnoID", OtherKey="AlumnoID")]
-		public EntitySet<Tareas> Tareas
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Alumno_Tarea", Storage="_Tareas", ThisKey="AlumnoID", OtherKey="AlumnoID")]
+		public EntitySet<Tarea> Tareas
 		{
 			get
 			{
@@ -442,608 +423,52 @@ namespace capaDATOS.DataBase
 			}
 		}
 		
-		private void attach_AlumnosxRecursosAprendizaje(AlumnosxRecursosAprendizaje entity)
+		private void attach_AlumnosxRecursosAprendizajes(AlumnosxRecursosAprendizaje entity)
 		{
 			this.SendPropertyChanging();
-			entity.Alumnos = this;
+			entity.Alumno = this;
 		}
 		
-		private void detach_AlumnosxRecursosAprendizaje(AlumnosxRecursosAprendizaje entity)
+		private void detach_AlumnosxRecursosAprendizajes(AlumnosxRecursosAprendizaje entity)
 		{
 			this.SendPropertyChanging();
-			entity.Alumnos = null;
+			entity.Alumno = null;
 		}
 		
-		private void attach_Comunicación(Comunicación entity)
+		private void attach_Comunicacións(Comunicación entity)
 		{
 			this.SendPropertyChanging();
-			entity.Alumnos = this;
+			entity.Alumno = this;
 		}
 		
-		private void detach_Comunicación(Comunicación entity)
+		private void detach_Comunicacións(Comunicación entity)
 		{
 			this.SendPropertyChanging();
-			entity.Alumnos = null;
+			entity.Alumno = null;
 		}
 		
-		private void attach_Examenes(Examenes entity)
+		private void attach_Examenes(Examene entity)
 		{
 			this.SendPropertyChanging();
-			entity.Alumnos = this;
+			entity.Alumno = this;
 		}
 		
-		private void detach_Examenes(Examenes entity)
+		private void detach_Examenes(Examene entity)
 		{
 			this.SendPropertyChanging();
-			entity.Alumnos = null;
+			entity.Alumno = null;
 		}
 		
-		private void attach_Tareas(Tareas entity)
+		private void attach_Tareas(Tarea entity)
 		{
 			this.SendPropertyChanging();
-			entity.Alumnos = this;
+			entity.Alumno = this;
 		}
 		
-		private void detach_Tareas(Tareas entity)
+		private void detach_Tareas(Tarea entity)
 		{
 			this.SendPropertyChanging();
-			entity.Alumnos = null;
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Alumnos")]
-	public partial class Alumnos1 : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _AlumnoID;
-		
-		private string _Nombre;
-		
-		private string _Identificación;
-		
-		private EntitySet<AlumnosxRecursosAprendizaje> _AlumnosxRecursosAprendizaje;
-		
-		private EntitySet<Comunicación> _Comunicación;
-		
-		private EntitySet<Examenes> _Examenes;
-		
-		private EntitySet<Tareas> _Tareas;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnAlumnoIDChanging(int value);
-    partial void OnAlumnoIDChanged();
-    partial void OnNombreChanging(string value);
-    partial void OnNombreChanged();
-    partial void OnIdentificaciónChanging(string value);
-    partial void OnIdentificaciónChanged();
-    #endregion
-		
-		public Alumnos1()
-		{
-			this._AlumnosxRecursosAprendizaje = new EntitySet<AlumnosxRecursosAprendizaje>(new Action<AlumnosxRecursosAprendizaje>(this.attach_AlumnosxRecursosAprendizaje), new Action<AlumnosxRecursosAprendizaje>(this.detach_AlumnosxRecursosAprendizaje));
-			this._Comunicación = new EntitySet<Comunicación>(new Action<Comunicación>(this.attach_Comunicación), new Action<Comunicación>(this.detach_Comunicación));
-			this._Examenes = new EntitySet<Examenes>(new Action<Examenes>(this.attach_Examenes), new Action<Examenes>(this.detach_Examenes));
-			this._Tareas = new EntitySet<Tareas>(new Action<Tareas>(this.attach_Tareas), new Action<Tareas>(this.detach_Tareas));
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_AlumnoID", DbType="Int NOT NULL", IsPrimaryKey=true)]
-		public int AlumnoID
-		{
-			get
-			{
-				return this._AlumnoID;
-			}
-			set
-			{
-				if ((this._AlumnoID != value))
-				{
-					this.OnAlumnoIDChanging(value);
-					this.SendPropertyChanging();
-					this._AlumnoID = value;
-					this.SendPropertyChanged("AlumnoID");
-					this.OnAlumnoIDChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Nombre", DbType="VarChar(255)")]
-		public string Nombre
-		{
-			get
-			{
-				return this._Nombre;
-			}
-			set
-			{
-				if ((this._Nombre != value))
-				{
-					this.OnNombreChanging(value);
-					this.SendPropertyChanging();
-					this._Nombre = value;
-					this.SendPropertyChanged("Nombre");
-					this.OnNombreChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Identificación", DbType="VarChar(20)")]
-		public string Identificación
-		{
-			get
-			{
-				return this._Identificación;
-			}
-			set
-			{
-				if ((this._Identificación != value))
-				{
-					this.OnIdentificaciónChanging(value);
-					this.SendPropertyChanging();
-					this._Identificación = value;
-					this.SendPropertyChanged("Identificación");
-					this.OnIdentificaciónChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Alumnos1_AlumnosxRecursosAprendizaje", Storage="_AlumnosxRecursosAprendizaje", ThisKey="AlumnoID", OtherKey="AlumnoID")]
-		public EntitySet<AlumnosxRecursosAprendizaje> AlumnosxRecursosAprendizaje
-		{
-			get
-			{
-				return this._AlumnosxRecursosAprendizaje;
-			}
-			set
-			{
-				this._AlumnosxRecursosAprendizaje.Assign(value);
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Alumnos1_Comunicación", Storage="_Comunicación", ThisKey="AlumnoID", OtherKey="AlumnoID")]
-		public EntitySet<Comunicación> Comunicación
-		{
-			get
-			{
-				return this._Comunicación;
-			}
-			set
-			{
-				this._Comunicación.Assign(value);
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Alumnos1_Examenes", Storage="_Examenes", ThisKey="AlumnoID", OtherKey="AlumnoID")]
-		public EntitySet<Examenes> Examenes
-		{
-			get
-			{
-				return this._Examenes;
-			}
-			set
-			{
-				this._Examenes.Assign(value);
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Alumnos1_Tareas", Storage="_Tareas", ThisKey="AlumnoID", OtherKey="AlumnoID")]
-		public EntitySet<Tareas> Tareas
-		{
-			get
-			{
-				return this._Tareas;
-			}
-			set
-			{
-				this._Tareas.Assign(value);
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-		
-		private void attach_AlumnosxRecursosAprendizaje(AlumnosxRecursosAprendizaje entity)
-		{
-			this.SendPropertyChanging();
-			entity.Alumnos1 = this;
-		}
-		
-		private void detach_AlumnosxRecursosAprendizaje(AlumnosxRecursosAprendizaje entity)
-		{
-			this.SendPropertyChanging();
-			entity.Alumnos1 = null;
-		}
-		
-		private void attach_Comunicación(Comunicación entity)
-		{
-			this.SendPropertyChanging();
-			entity.Alumnos1 = this;
-		}
-		
-		private void detach_Comunicación(Comunicación entity)
-		{
-			this.SendPropertyChanging();
-			entity.Alumnos1 = null;
-		}
-		
-		private void attach_Examenes(Examenes entity)
-		{
-			this.SendPropertyChanging();
-			entity.Alumnos1 = this;
-		}
-		
-		private void detach_Examenes(Examenes entity)
-		{
-			this.SendPropertyChanging();
-			entity.Alumnos1 = null;
-		}
-		
-		private void attach_Tareas(Tareas entity)
-		{
-			this.SendPropertyChanging();
-			entity.Alumnos1 = this;
-		}
-		
-		private void detach_Tareas(Tareas entity)
-		{
-			this.SendPropertyChanging();
-			entity.Alumnos1 = null;
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.TM_Usuario")]
-	public partial class TM_Usuario : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _IdUser;
-		
-		private string _UserName;
-		
-		private string _PasswordUser;
-		
-		private string _CreateBy;
-		
-		private string _ModifyBy;
-		
-		private string _CancelBy;
-		
-		private System.Nullable<System.DateTime> _FecCreate;
-		
-		private System.Nullable<System.DateTime> _FecModify;
-		
-		private System.Nullable<System.DateTime> _FecCancel;
-		
-		private System.Nullable<bool> _FlagActivo;
-		
-		private EntitySet<TD_Login> _TD_Login;
-		
-		private EntitySet<TD_RolesxUsuario> _TD_RolesxUsuario;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnIdUserChanging(int value);
-    partial void OnIdUserChanged();
-    partial void OnUserNameChanging(string value);
-    partial void OnUserNameChanged();
-    partial void OnPasswordUserChanging(string value);
-    partial void OnPasswordUserChanged();
-    partial void OnCreateByChanging(string value);
-    partial void OnCreateByChanged();
-    partial void OnModifyByChanging(string value);
-    partial void OnModifyByChanged();
-    partial void OnCancelByChanging(string value);
-    partial void OnCancelByChanged();
-    partial void OnFecCreateChanging(System.Nullable<System.DateTime> value);
-    partial void OnFecCreateChanged();
-    partial void OnFecModifyChanging(System.Nullable<System.DateTime> value);
-    partial void OnFecModifyChanged();
-    partial void OnFecCancelChanging(System.Nullable<System.DateTime> value);
-    partial void OnFecCancelChanged();
-    partial void OnFlagActivoChanging(System.Nullable<bool> value);
-    partial void OnFlagActivoChanged();
-    #endregion
-		
-		public TM_Usuario()
-		{
-			this._TD_Login = new EntitySet<TD_Login>(new Action<TD_Login>(this.attach_TD_Login), new Action<TD_Login>(this.detach_TD_Login));
-			this._TD_RolesxUsuario = new EntitySet<TD_RolesxUsuario>(new Action<TD_RolesxUsuario>(this.attach_TD_RolesxUsuario), new Action<TD_RolesxUsuario>(this.detach_TD_RolesxUsuario));
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IdUser", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public int IdUser
-		{
-			get
-			{
-				return this._IdUser;
-			}
-			set
-			{
-				if ((this._IdUser != value))
-				{
-					this.OnIdUserChanging(value);
-					this.SendPropertyChanging();
-					this._IdUser = value;
-					this.SendPropertyChanged("IdUser");
-					this.OnIdUserChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UserName", DbType="NVarChar(30)")]
-		public string UserName
-		{
-			get
-			{
-				return this._UserName;
-			}
-			set
-			{
-				if ((this._UserName != value))
-				{
-					this.OnUserNameChanging(value);
-					this.SendPropertyChanging();
-					this._UserName = value;
-					this.SendPropertyChanged("UserName");
-					this.OnUserNameChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PasswordUser", DbType="NVarChar(200)")]
-		public string PasswordUser
-		{
-			get
-			{
-				return this._PasswordUser;
-			}
-			set
-			{
-				if ((this._PasswordUser != value))
-				{
-					this.OnPasswordUserChanging(value);
-					this.SendPropertyChanging();
-					this._PasswordUser = value;
-					this.SendPropertyChanged("PasswordUser");
-					this.OnPasswordUserChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CreateBy", DbType="NVarChar(25)")]
-		public string CreateBy
-		{
-			get
-			{
-				return this._CreateBy;
-			}
-			set
-			{
-				if ((this._CreateBy != value))
-				{
-					this.OnCreateByChanging(value);
-					this.SendPropertyChanging();
-					this._CreateBy = value;
-					this.SendPropertyChanged("CreateBy");
-					this.OnCreateByChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ModifyBy", DbType="NVarChar(25)")]
-		public string ModifyBy
-		{
-			get
-			{
-				return this._ModifyBy;
-			}
-			set
-			{
-				if ((this._ModifyBy != value))
-				{
-					this.OnModifyByChanging(value);
-					this.SendPropertyChanging();
-					this._ModifyBy = value;
-					this.SendPropertyChanged("ModifyBy");
-					this.OnModifyByChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CancelBy", DbType="NVarChar(25)")]
-		public string CancelBy
-		{
-			get
-			{
-				return this._CancelBy;
-			}
-			set
-			{
-				if ((this._CancelBy != value))
-				{
-					this.OnCancelByChanging(value);
-					this.SendPropertyChanging();
-					this._CancelBy = value;
-					this.SendPropertyChanged("CancelBy");
-					this.OnCancelByChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FecCreate", DbType="Date")]
-		public System.Nullable<System.DateTime> FecCreate
-		{
-			get
-			{
-				return this._FecCreate;
-			}
-			set
-			{
-				if ((this._FecCreate != value))
-				{
-					this.OnFecCreateChanging(value);
-					this.SendPropertyChanging();
-					this._FecCreate = value;
-					this.SendPropertyChanged("FecCreate");
-					this.OnFecCreateChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FecModify", DbType="Date")]
-		public System.Nullable<System.DateTime> FecModify
-		{
-			get
-			{
-				return this._FecModify;
-			}
-			set
-			{
-				if ((this._FecModify != value))
-				{
-					this.OnFecModifyChanging(value);
-					this.SendPropertyChanging();
-					this._FecModify = value;
-					this.SendPropertyChanged("FecModify");
-					this.OnFecModifyChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FecCancel", DbType="Date")]
-		public System.Nullable<System.DateTime> FecCancel
-		{
-			get
-			{
-				return this._FecCancel;
-			}
-			set
-			{
-				if ((this._FecCancel != value))
-				{
-					this.OnFecCancelChanging(value);
-					this.SendPropertyChanging();
-					this._FecCancel = value;
-					this.SendPropertyChanged("FecCancel");
-					this.OnFecCancelChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FlagActivo", DbType="Bit")]
-		public System.Nullable<bool> FlagActivo
-		{
-			get
-			{
-				return this._FlagActivo;
-			}
-			set
-			{
-				if ((this._FlagActivo != value))
-				{
-					this.OnFlagActivoChanging(value);
-					this.SendPropertyChanging();
-					this._FlagActivo = value;
-					this.SendPropertyChanged("FlagActivo");
-					this.OnFlagActivoChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TM_Usuario_TD_Login", Storage="_TD_Login", ThisKey="IdUser", OtherKey="IdUser")]
-		public EntitySet<TD_Login> TD_Login
-		{
-			get
-			{
-				return this._TD_Login;
-			}
-			set
-			{
-				this._TD_Login.Assign(value);
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TM_Usuario_TD_RolesxUsuario", Storage="_TD_RolesxUsuario", ThisKey="IdUser", OtherKey="IdUser")]
-		public EntitySet<TD_RolesxUsuario> TD_RolesxUsuario
-		{
-			get
-			{
-				return this._TD_RolesxUsuario;
-			}
-			set
-			{
-				this._TD_RolesxUsuario.Assign(value);
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-		
-		private void attach_TD_Login(TD_Login entity)
-		{
-			this.SendPropertyChanging();
-			entity.TM_Usuario = this;
-		}
-		
-		private void detach_TD_Login(TD_Login entity)
-		{
-			this.SendPropertyChanging();
-			entity.TM_Usuario = null;
-		}
-		
-		private void attach_TD_RolesxUsuario(TD_RolesxUsuario entity)
-		{
-			this.SendPropertyChanging();
-			entity.TM_Usuario = this;
-		}
-		
-		private void detach_TD_RolesxUsuario(TD_RolesxUsuario entity)
-		{
-			this.SendPropertyChanging();
-			entity.TM_Usuario = null;
+			entity.Alumno = null;
 		}
 	}
 	
@@ -1065,9 +490,7 @@ namespace capaDATOS.DataBase
 		
 		private string _Descripción;
 		
-		private EntityRef<Alumnos> _Alumnos;
-		
-		private EntityRef<Alumnos1> _Alumnos1;
+		private EntityRef<Alumno> _Alumno;
 		
 		private EntityRef<RecursosAprendizaje> _RecursosAprendizaje;
 		
@@ -1091,8 +514,7 @@ namespace capaDATOS.DataBase
 		
 		public AlumnosxRecursosAprendizaje()
 		{
-			this._Alumnos = default(EntityRef<Alumnos>);
-			this._Alumnos1 = default(EntityRef<Alumnos1>);
+			this._Alumno = default(EntityRef<Alumno>);
 			this._RecursosAprendizaje = default(EntityRef<RecursosAprendizaje>);
 			OnCreated();
 		}
@@ -1128,7 +550,7 @@ namespace capaDATOS.DataBase
 			{
 				if ((this._AlumnoID != value))
 				{
-					if ((this._Alumnos.HasLoadedOrAssignedValue || this._Alumnos1.HasLoadedOrAssignedValue))
+					if (this._Alumno.HasLoadedOrAssignedValue)
 					{
 						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
 					}
@@ -1225,70 +647,36 @@ namespace capaDATOS.DataBase
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Alumnos_AlumnosxRecursosAprendizaje", Storage="_Alumnos", ThisKey="AlumnoID", OtherKey="AlumnoID", IsForeignKey=true)]
-		public Alumnos Alumnos
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Alumno_AlumnosxRecursosAprendizaje", Storage="_Alumno", ThisKey="AlumnoID", OtherKey="AlumnoID", IsForeignKey=true)]
+		public Alumno Alumno
 		{
 			get
 			{
-				return this._Alumnos.Entity;
+				return this._Alumno.Entity;
 			}
 			set
 			{
-				Alumnos previousValue = this._Alumnos.Entity;
+				Alumno previousValue = this._Alumno.Entity;
 				if (((previousValue != value) 
-							|| (this._Alumnos.HasLoadedOrAssignedValue == false)))
+							|| (this._Alumno.HasLoadedOrAssignedValue == false)))
 				{
 					this.SendPropertyChanging();
 					if ((previousValue != null))
 					{
-						this._Alumnos.Entity = null;
-						previousValue.AlumnosxRecursosAprendizaje.Remove(this);
+						this._Alumno.Entity = null;
+						previousValue.AlumnosxRecursosAprendizajes.Remove(this);
 					}
-					this._Alumnos.Entity = value;
+					this._Alumno.Entity = value;
 					if ((value != null))
 					{
-						value.AlumnosxRecursosAprendizaje.Add(this);
+						value.AlumnosxRecursosAprendizajes.Add(this);
 						this._AlumnoID = value.AlumnoID;
 					}
 					else
 					{
 						this._AlumnoID = default(Nullable<int>);
 					}
-					this.SendPropertyChanged("Alumnos");
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Alumnos1_AlumnosxRecursosAprendizaje", Storage="_Alumnos1", ThisKey="AlumnoID", OtherKey="AlumnoID", IsForeignKey=true)]
-		public Alumnos1 Alumnos1
-		{
-			get
-			{
-				return this._Alumnos1.Entity;
-			}
-			set
-			{
-				Alumnos1 previousValue = this._Alumnos1.Entity;
-				if (((previousValue != value) 
-							|| (this._Alumnos1.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._Alumnos1.Entity = null;
-						previousValue.AlumnosxRecursosAprendizaje.Remove(this);
-					}
-					this._Alumnos1.Entity = value;
-					if ((value != null))
-					{
-						value.AlumnosxRecursosAprendizaje.Add(this);
-						this._AlumnoID = value.AlumnoID;
-					}
-					else
-					{
-						this._AlumnoID = default(Nullable<int>);
-					}
-					this.SendPropertyChanged("Alumnos1");
+					this.SendPropertyChanged("Alumno");
 				}
 			}
 		}
@@ -1310,12 +698,12 @@ namespace capaDATOS.DataBase
 					if ((previousValue != null))
 					{
 						this._RecursosAprendizaje.Entity = null;
-						previousValue.AlumnosxRecursosAprendizaje.Remove(this);
+						previousValue.AlumnosxRecursosAprendizajes.Remove(this);
 					}
 					this._RecursosAprendizaje.Entity = value;
 					if ((value != null))
 					{
-						value.AlumnosxRecursosAprendizaje.Add(this);
+						value.AlumnosxRecursosAprendizajes.Add(this);
 						this._RecursosAprendizajeID = value.RecursosAprendizajeID;
 					}
 					else
@@ -1362,9 +750,9 @@ namespace capaDATOS.DataBase
 		
 		private string _Descripción;
 		
-		private EntitySet<CalendarioAcademicoxExamen> _CalendarioAcademicoxExamen;
+		private EntitySet<CalendarioAcademicoxExamen> _CalendarioAcademicoxExamens;
 		
-		private EntitySet<CalendarioAcademicoxRecursosAprendizaje> _CalendarioAcademicoxRecursosAprendizaje;
+		private EntitySet<CalendarioAcademicoxRecursosAprendizaje> _CalendarioAcademicoxRecursosAprendizajes;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
@@ -1382,8 +770,8 @@ namespace capaDATOS.DataBase
 		
 		public CalendarioAcademico()
 		{
-			this._CalendarioAcademicoxExamen = new EntitySet<CalendarioAcademicoxExamen>(new Action<CalendarioAcademicoxExamen>(this.attach_CalendarioAcademicoxExamen), new Action<CalendarioAcademicoxExamen>(this.detach_CalendarioAcademicoxExamen));
-			this._CalendarioAcademicoxRecursosAprendizaje = new EntitySet<CalendarioAcademicoxRecursosAprendizaje>(new Action<CalendarioAcademicoxRecursosAprendizaje>(this.attach_CalendarioAcademicoxRecursosAprendizaje), new Action<CalendarioAcademicoxRecursosAprendizaje>(this.detach_CalendarioAcademicoxRecursosAprendizaje));
+			this._CalendarioAcademicoxExamens = new EntitySet<CalendarioAcademicoxExamen>(new Action<CalendarioAcademicoxExamen>(this.attach_CalendarioAcademicoxExamens), new Action<CalendarioAcademicoxExamen>(this.detach_CalendarioAcademicoxExamens));
+			this._CalendarioAcademicoxRecursosAprendizajes = new EntitySet<CalendarioAcademicoxRecursosAprendizaje>(new Action<CalendarioAcademicoxRecursosAprendizaje>(this.attach_CalendarioAcademicoxRecursosAprendizajes), new Action<CalendarioAcademicoxRecursosAprendizaje>(this.detach_CalendarioAcademicoxRecursosAprendizajes));
 			OnCreated();
 		}
 		
@@ -1467,29 +855,29 @@ namespace capaDATOS.DataBase
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="CalendarioAcademico_CalendarioAcademicoxExamen", Storage="_CalendarioAcademicoxExamen", ThisKey="CalendarioAcademicoID", OtherKey="CalendarioAcademicoID")]
-		public EntitySet<CalendarioAcademicoxExamen> CalendarioAcademicoxExamen
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="CalendarioAcademico_CalendarioAcademicoxExamen", Storage="_CalendarioAcademicoxExamens", ThisKey="CalendarioAcademicoID", OtherKey="CalendarioAcademicoID")]
+		public EntitySet<CalendarioAcademicoxExamen> CalendarioAcademicoxExamens
 		{
 			get
 			{
-				return this._CalendarioAcademicoxExamen;
+				return this._CalendarioAcademicoxExamens;
 			}
 			set
 			{
-				this._CalendarioAcademicoxExamen.Assign(value);
+				this._CalendarioAcademicoxExamens.Assign(value);
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="CalendarioAcademico_CalendarioAcademicoxRecursosAprendizaje", Storage="_CalendarioAcademicoxRecursosAprendizaje", ThisKey="CalendarioAcademicoID", OtherKey="CalendarioAcademicoID")]
-		public EntitySet<CalendarioAcademicoxRecursosAprendizaje> CalendarioAcademicoxRecursosAprendizaje
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="CalendarioAcademico_CalendarioAcademicoxRecursosAprendizaje", Storage="_CalendarioAcademicoxRecursosAprendizajes", ThisKey="CalendarioAcademicoID", OtherKey="CalendarioAcademicoID")]
+		public EntitySet<CalendarioAcademicoxRecursosAprendizaje> CalendarioAcademicoxRecursosAprendizajes
 		{
 			get
 			{
-				return this._CalendarioAcademicoxRecursosAprendizaje;
+				return this._CalendarioAcademicoxRecursosAprendizajes;
 			}
 			set
 			{
-				this._CalendarioAcademicoxRecursosAprendizaje.Assign(value);
+				this._CalendarioAcademicoxRecursosAprendizajes.Assign(value);
 			}
 		}
 		
@@ -1513,25 +901,25 @@ namespace capaDATOS.DataBase
 			}
 		}
 		
-		private void attach_CalendarioAcademicoxExamen(CalendarioAcademicoxExamen entity)
+		private void attach_CalendarioAcademicoxExamens(CalendarioAcademicoxExamen entity)
 		{
 			this.SendPropertyChanging();
 			entity.CalendarioAcademico = this;
 		}
 		
-		private void detach_CalendarioAcademicoxExamen(CalendarioAcademicoxExamen entity)
+		private void detach_CalendarioAcademicoxExamens(CalendarioAcademicoxExamen entity)
 		{
 			this.SendPropertyChanging();
 			entity.CalendarioAcademico = null;
 		}
 		
-		private void attach_CalendarioAcademicoxRecursosAprendizaje(CalendarioAcademicoxRecursosAprendizaje entity)
+		private void attach_CalendarioAcademicoxRecursosAprendizajes(CalendarioAcademicoxRecursosAprendizaje entity)
 		{
 			this.SendPropertyChanging();
 			entity.CalendarioAcademico = this;
 		}
 		
-		private void detach_CalendarioAcademicoxRecursosAprendizaje(CalendarioAcademicoxRecursosAprendizaje entity)
+		private void detach_CalendarioAcademicoxRecursosAprendizajes(CalendarioAcademicoxRecursosAprendizaje entity)
 		{
 			this.SendPropertyChanging();
 			entity.CalendarioAcademico = null;
@@ -1556,8 +944,6 @@ namespace capaDATOS.DataBase
 		
 		private EntityRef<CalendarioAcademico> _CalendarioAcademico;
 		
-		private EntityRef<Examenes> _Examenes;
-		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -1577,7 +963,6 @@ namespace capaDATOS.DataBase
 		public CalendarioAcademicoxExamen()
 		{
 			this._CalendarioAcademico = default(EntityRef<CalendarioAcademico>);
-			this._Examenes = default(EntityRef<Examenes>);
 			OnCreated();
 		}
 		
@@ -1636,10 +1021,6 @@ namespace capaDATOS.DataBase
 			{
 				if ((this._ExamenID != value))
 				{
-					if (this._Examenes.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
 					this.OnExamenIDChanging(value);
 					this.SendPropertyChanging();
 					this._ExamenID = value;
@@ -1706,12 +1087,12 @@ namespace capaDATOS.DataBase
 					if ((previousValue != null))
 					{
 						this._CalendarioAcademico.Entity = null;
-						previousValue.CalendarioAcademicoxExamen.Remove(this);
+						previousValue.CalendarioAcademicoxExamens.Remove(this);
 					}
 					this._CalendarioAcademico.Entity = value;
 					if ((value != null))
 					{
-						value.CalendarioAcademicoxExamen.Add(this);
+						value.CalendarioAcademicoxExamens.Add(this);
 						this._CalendarioAcademicoID = value.CalendarioAcademicoID;
 					}
 					else
@@ -1719,40 +1100,6 @@ namespace capaDATOS.DataBase
 						this._CalendarioAcademicoID = default(Nullable<int>);
 					}
 					this.SendPropertyChanged("CalendarioAcademico");
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Examenes_CalendarioAcademicoxExamen", Storage="_Examenes", ThisKey="ExamenID", OtherKey="ExamenID", IsForeignKey=true)]
-		public Examenes Examenes
-		{
-			get
-			{
-				return this._Examenes.Entity;
-			}
-			set
-			{
-				Examenes previousValue = this._Examenes.Entity;
-				if (((previousValue != value) 
-							|| (this._Examenes.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._Examenes.Entity = null;
-						previousValue.CalendarioAcademicoxExamen.Remove(this);
-					}
-					this._Examenes.Entity = value;
-					if ((value != null))
-					{
-						value.CalendarioAcademicoxExamen.Add(this);
-						this._ExamenID = value.ExamenID;
-					}
-					else
-					{
-						this._ExamenID = default(Nullable<int>);
-					}
-					this.SendPropertyChanged("Examenes");
 				}
 			}
 		}
@@ -1898,12 +1245,12 @@ namespace capaDATOS.DataBase
 					if ((previousValue != null))
 					{
 						this._CalendarioAcademico.Entity = null;
-						previousValue.CalendarioAcademicoxRecursosAprendizaje.Remove(this);
+						previousValue.CalendarioAcademicoxRecursosAprendizajes.Remove(this);
 					}
 					this._CalendarioAcademico.Entity = value;
 					if ((value != null))
 					{
-						value.CalendarioAcademicoxRecursosAprendizaje.Add(this);
+						value.CalendarioAcademicoxRecursosAprendizajes.Add(this);
 						this._CalendarioAcademicoID = value.CalendarioAcademicoID;
 					}
 					else
@@ -1932,12 +1279,12 @@ namespace capaDATOS.DataBase
 					if ((previousValue != null))
 					{
 						this._RecursosAprendizaje.Entity = null;
-						previousValue.CalendarioAcademicoxRecursosAprendizaje.Remove(this);
+						previousValue.CalendarioAcademicoxRecursosAprendizajes.Remove(this);
 					}
 					this._RecursosAprendizaje.Entity = value;
 					if ((value != null))
 					{
-						value.CalendarioAcademicoxRecursosAprendizaje.Add(this);
+						value.CalendarioAcademicoxRecursosAprendizajes.Add(this);
 						this._RecursosAprendizajeID = value.RecursosAprendizajeID;
 					}
 					else
@@ -1988,11 +1335,9 @@ namespace capaDATOS.DataBase
 		
 		private string _Descripción;
 		
-		private EntityRef<Alumnos> _Alumnos;
+		private EntityRef<Alumno> _Alumno;
 		
-		private EntityRef<Alumnos1> _Alumnos1;
-		
-		private EntityRef<Cursos> _Cursos;
+		private EntityRef<Curso> _Curso;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
@@ -2014,9 +1359,8 @@ namespace capaDATOS.DataBase
 		
 		public Comunicación()
 		{
-			this._Alumnos = default(EntityRef<Alumnos>);
-			this._Alumnos1 = default(EntityRef<Alumnos1>);
-			this._Cursos = default(EntityRef<Cursos>);
+			this._Alumno = default(EntityRef<Alumno>);
+			this._Curso = default(EntityRef<Curso>);
 			OnCreated();
 		}
 		
@@ -2051,7 +1395,7 @@ namespace capaDATOS.DataBase
 			{
 				if ((this._AlumnoID != value))
 				{
-					if ((this._Alumnos.HasLoadedOrAssignedValue || this._Alumnos1.HasLoadedOrAssignedValue))
+					if (this._Alumno.HasLoadedOrAssignedValue)
 					{
 						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
 					}
@@ -2075,7 +1419,7 @@ namespace capaDATOS.DataBase
 			{
 				if ((this._CursoID != value))
 				{
-					if (this._Cursos.HasLoadedOrAssignedValue)
+					if (this._Curso.HasLoadedOrAssignedValue)
 					{
 						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
 					}
@@ -2148,104 +1492,70 @@ namespace capaDATOS.DataBase
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Alumnos_Comunicación", Storage="_Alumnos", ThisKey="AlumnoID", OtherKey="AlumnoID", IsForeignKey=true)]
-		public Alumnos Alumnos
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Alumno_Comunicación", Storage="_Alumno", ThisKey="AlumnoID", OtherKey="AlumnoID", IsForeignKey=true)]
+		public Alumno Alumno
 		{
 			get
 			{
-				return this._Alumnos.Entity;
+				return this._Alumno.Entity;
 			}
 			set
 			{
-				Alumnos previousValue = this._Alumnos.Entity;
+				Alumno previousValue = this._Alumno.Entity;
 				if (((previousValue != value) 
-							|| (this._Alumnos.HasLoadedOrAssignedValue == false)))
+							|| (this._Alumno.HasLoadedOrAssignedValue == false)))
 				{
 					this.SendPropertyChanging();
 					if ((previousValue != null))
 					{
-						this._Alumnos.Entity = null;
-						previousValue.Comunicación.Remove(this);
+						this._Alumno.Entity = null;
+						previousValue.Comunicacións.Remove(this);
 					}
-					this._Alumnos.Entity = value;
+					this._Alumno.Entity = value;
 					if ((value != null))
 					{
-						value.Comunicación.Add(this);
+						value.Comunicacións.Add(this);
 						this._AlumnoID = value.AlumnoID;
 					}
 					else
 					{
 						this._AlumnoID = default(Nullable<int>);
 					}
-					this.SendPropertyChanged("Alumnos");
+					this.SendPropertyChanged("Alumno");
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Alumnos1_Comunicación", Storage="_Alumnos1", ThisKey="AlumnoID", OtherKey="AlumnoID", IsForeignKey=true)]
-		public Alumnos1 Alumnos1
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Curso_Comunicación", Storage="_Curso", ThisKey="CursoID", OtherKey="CursoID", IsForeignKey=true)]
+		public Curso Curso
 		{
 			get
 			{
-				return this._Alumnos1.Entity;
+				return this._Curso.Entity;
 			}
 			set
 			{
-				Alumnos1 previousValue = this._Alumnos1.Entity;
+				Curso previousValue = this._Curso.Entity;
 				if (((previousValue != value) 
-							|| (this._Alumnos1.HasLoadedOrAssignedValue == false)))
+							|| (this._Curso.HasLoadedOrAssignedValue == false)))
 				{
 					this.SendPropertyChanging();
 					if ((previousValue != null))
 					{
-						this._Alumnos1.Entity = null;
-						previousValue.Comunicación.Remove(this);
+						this._Curso.Entity = null;
+						previousValue.Comunicacións.Remove(this);
 					}
-					this._Alumnos1.Entity = value;
+					this._Curso.Entity = value;
 					if ((value != null))
 					{
-						value.Comunicación.Add(this);
-						this._AlumnoID = value.AlumnoID;
-					}
-					else
-					{
-						this._AlumnoID = default(Nullable<int>);
-					}
-					this.SendPropertyChanged("Alumnos1");
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Cursos_Comunicación", Storage="_Cursos", ThisKey="CursoID", OtherKey="CursoID", IsForeignKey=true)]
-		public Cursos Cursos
-		{
-			get
-			{
-				return this._Cursos.Entity;
-			}
-			set
-			{
-				Cursos previousValue = this._Cursos.Entity;
-				if (((previousValue != value) 
-							|| (this._Cursos.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._Cursos.Entity = null;
-						previousValue.Comunicación.Remove(this);
-					}
-					this._Cursos.Entity = value;
-					if ((value != null))
-					{
-						value.Comunicación.Add(this);
+						value.Comunicacións.Add(this);
 						this._CursoID = value.CursoID;
 					}
 					else
 					{
 						this._CursoID = default(Nullable<int>);
 					}
-					this.SendPropertyChanged("Cursos");
+					this.SendPropertyChanged("Curso");
 				}
 			}
 		}
@@ -2272,7 +1582,7 @@ namespace capaDATOS.DataBase
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Cursos")]
-	public partial class Cursos : INotifyPropertyChanging, INotifyPropertyChanged
+	public partial class Curso : INotifyPropertyChanging, INotifyPropertyChanged
 	{
 		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
@@ -2285,13 +1595,13 @@ namespace capaDATOS.DataBase
 		
 		private string _Descripción;
 		
-		private EntitySet<Comunicación> _Comunicación;
+		private EntitySet<Comunicación> _Comunicacións;
 		
-		private EntitySet<Examenes> _Examenes;
+		private EntitySet<Examene> _Examenes;
 		
-		private EntitySet<ProfesorxCurso> _ProfesorxCurso;
+		private EntitySet<ProfesorxCurso> _ProfesorxCursos;
 		
-		private EntitySet<Tareas> _Tareas;
+		private EntitySet<Tarea> _Tareas;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
@@ -2307,12 +1617,12 @@ namespace capaDATOS.DataBase
     partial void OnDescripciónChanged();
     #endregion
 		
-		public Cursos()
+		public Curso()
 		{
-			this._Comunicación = new EntitySet<Comunicación>(new Action<Comunicación>(this.attach_Comunicación), new Action<Comunicación>(this.detach_Comunicación));
-			this._Examenes = new EntitySet<Examenes>(new Action<Examenes>(this.attach_Examenes), new Action<Examenes>(this.detach_Examenes));
-			this._ProfesorxCurso = new EntitySet<ProfesorxCurso>(new Action<ProfesorxCurso>(this.attach_ProfesorxCurso), new Action<ProfesorxCurso>(this.detach_ProfesorxCurso));
-			this._Tareas = new EntitySet<Tareas>(new Action<Tareas>(this.attach_Tareas), new Action<Tareas>(this.detach_Tareas));
+			this._Comunicacións = new EntitySet<Comunicación>(new Action<Comunicación>(this.attach_Comunicacións), new Action<Comunicación>(this.detach_Comunicacións));
+			this._Examenes = new EntitySet<Examene>(new Action<Examene>(this.attach_Examenes), new Action<Examene>(this.detach_Examenes));
+			this._ProfesorxCursos = new EntitySet<ProfesorxCurso>(new Action<ProfesorxCurso>(this.attach_ProfesorxCursos), new Action<ProfesorxCurso>(this.detach_ProfesorxCursos));
+			this._Tareas = new EntitySet<Tarea>(new Action<Tarea>(this.attach_Tareas), new Action<Tarea>(this.detach_Tareas));
 			OnCreated();
 		}
 		
@@ -2396,21 +1706,21 @@ namespace capaDATOS.DataBase
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Cursos_Comunicación", Storage="_Comunicación", ThisKey="CursoID", OtherKey="CursoID")]
-		public EntitySet<Comunicación> Comunicación
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Curso_Comunicación", Storage="_Comunicacións", ThisKey="CursoID", OtherKey="CursoID")]
+		public EntitySet<Comunicación> Comunicacións
 		{
 			get
 			{
-				return this._Comunicación;
+				return this._Comunicacións;
 			}
 			set
 			{
-				this._Comunicación.Assign(value);
+				this._Comunicacións.Assign(value);
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Cursos_Examenes", Storage="_Examenes", ThisKey="CursoID", OtherKey="CursoID")]
-		public EntitySet<Examenes> Examenes
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Curso_Examene", Storage="_Examenes", ThisKey="CursoID", OtherKey="CursoID")]
+		public EntitySet<Examene> Examenes
 		{
 			get
 			{
@@ -2422,21 +1732,21 @@ namespace capaDATOS.DataBase
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Cursos_ProfesorxCurso", Storage="_ProfesorxCurso", ThisKey="CursoID", OtherKey="CursoID")]
-		public EntitySet<ProfesorxCurso> ProfesorxCurso
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Curso_ProfesorxCurso", Storage="_ProfesorxCursos", ThisKey="CursoID", OtherKey="CursoID")]
+		public EntitySet<ProfesorxCurso> ProfesorxCursos
 		{
 			get
 			{
-				return this._ProfesorxCurso;
+				return this._ProfesorxCursos;
 			}
 			set
 			{
-				this._ProfesorxCurso.Assign(value);
+				this._ProfesorxCursos.Assign(value);
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Cursos_Tareas", Storage="_Tareas", ThisKey="CursoID", OtherKey="CursoID")]
-		public EntitySet<Tareas> Tareas
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Curso_Tarea", Storage="_Tareas", ThisKey="CursoID", OtherKey="CursoID")]
+		public EntitySet<Tarea> Tareas
 		{
 			get
 			{
@@ -2468,57 +1778,57 @@ namespace capaDATOS.DataBase
 			}
 		}
 		
-		private void attach_Comunicación(Comunicación entity)
+		private void attach_Comunicacións(Comunicación entity)
 		{
 			this.SendPropertyChanging();
-			entity.Cursos = this;
+			entity.Curso = this;
 		}
 		
-		private void detach_Comunicación(Comunicación entity)
+		private void detach_Comunicacións(Comunicación entity)
 		{
 			this.SendPropertyChanging();
-			entity.Cursos = null;
+			entity.Curso = null;
 		}
 		
-		private void attach_Examenes(Examenes entity)
+		private void attach_Examenes(Examene entity)
 		{
 			this.SendPropertyChanging();
-			entity.Cursos = this;
+			entity.Curso = this;
 		}
 		
-		private void detach_Examenes(Examenes entity)
+		private void detach_Examenes(Examene entity)
 		{
 			this.SendPropertyChanging();
-			entity.Cursos = null;
+			entity.Curso = null;
 		}
 		
-		private void attach_ProfesorxCurso(ProfesorxCurso entity)
+		private void attach_ProfesorxCursos(ProfesorxCurso entity)
 		{
 			this.SendPropertyChanging();
-			entity.Cursos = this;
+			entity.Curso = this;
 		}
 		
-		private void detach_ProfesorxCurso(ProfesorxCurso entity)
+		private void detach_ProfesorxCursos(ProfesorxCurso entity)
 		{
 			this.SendPropertyChanging();
-			entity.Cursos = null;
+			entity.Curso = null;
 		}
 		
-		private void attach_Tareas(Tareas entity)
+		private void attach_Tareas(Tarea entity)
 		{
 			this.SendPropertyChanging();
-			entity.Cursos = this;
+			entity.Curso = this;
 		}
 		
-		private void detach_Tareas(Tareas entity)
+		private void detach_Tareas(Tarea entity)
 		{
 			this.SendPropertyChanging();
-			entity.Cursos = null;
+			entity.Curso = null;
 		}
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Examenes")]
-	public partial class Examenes : INotifyPropertyChanging, INotifyPropertyChanged
+	public partial class Examene : INotifyPropertyChanging, INotifyPropertyChanged
 	{
 		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
@@ -2535,13 +1845,9 @@ namespace capaDATOS.DataBase
 		
 		private string _Descripción;
 		
-		private EntitySet<CalendarioAcademicoxExamen> _CalendarioAcademicoxExamen;
+		private EntityRef<Alumno> _Alumno;
 		
-		private EntityRef<Alumnos> _Alumnos;
-		
-		private EntityRef<Alumnos1> _Alumnos1;
-		
-		private EntityRef<Cursos> _Cursos;
+		private EntityRef<Curso> _Curso;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
@@ -2561,12 +1867,10 @@ namespace capaDATOS.DataBase
     partial void OnDescripciónChanged();
     #endregion
 		
-		public Examenes()
+		public Examene()
 		{
-			this._CalendarioAcademicoxExamen = new EntitySet<CalendarioAcademicoxExamen>(new Action<CalendarioAcademicoxExamen>(this.attach_CalendarioAcademicoxExamen), new Action<CalendarioAcademicoxExamen>(this.detach_CalendarioAcademicoxExamen));
-			this._Alumnos = default(EntityRef<Alumnos>);
-			this._Alumnos1 = default(EntityRef<Alumnos1>);
-			this._Cursos = default(EntityRef<Cursos>);
+			this._Alumno = default(EntityRef<Alumno>);
+			this._Curso = default(EntityRef<Curso>);
 			OnCreated();
 		}
 		
@@ -2601,7 +1905,7 @@ namespace capaDATOS.DataBase
 			{
 				if ((this._AlumnoID != value))
 				{
-					if ((this._Alumnos.HasLoadedOrAssignedValue || this._Alumnos1.HasLoadedOrAssignedValue))
+					if (this._Alumno.HasLoadedOrAssignedValue)
 					{
 						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
 					}
@@ -2625,7 +1929,7 @@ namespace capaDATOS.DataBase
 			{
 				if ((this._CursoID != value))
 				{
-					if (this._Cursos.HasLoadedOrAssignedValue)
+					if (this._Curso.HasLoadedOrAssignedValue)
 					{
 						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
 					}
@@ -2698,39 +2002,26 @@ namespace capaDATOS.DataBase
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Examenes_CalendarioAcademicoxExamen", Storage="_CalendarioAcademicoxExamen", ThisKey="ExamenID", OtherKey="ExamenID")]
-		public EntitySet<CalendarioAcademicoxExamen> CalendarioAcademicoxExamen
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Alumno_Examene", Storage="_Alumno", ThisKey="AlumnoID", OtherKey="AlumnoID", IsForeignKey=true)]
+		public Alumno Alumno
 		{
 			get
 			{
-				return this._CalendarioAcademicoxExamen;
+				return this._Alumno.Entity;
 			}
 			set
 			{
-				this._CalendarioAcademicoxExamen.Assign(value);
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Alumnos_Examenes", Storage="_Alumnos", ThisKey="AlumnoID", OtherKey="AlumnoID", IsForeignKey=true)]
-		public Alumnos Alumnos
-		{
-			get
-			{
-				return this._Alumnos.Entity;
-			}
-			set
-			{
-				Alumnos previousValue = this._Alumnos.Entity;
+				Alumno previousValue = this._Alumno.Entity;
 				if (((previousValue != value) 
-							|| (this._Alumnos.HasLoadedOrAssignedValue == false)))
+							|| (this._Alumno.HasLoadedOrAssignedValue == false)))
 				{
 					this.SendPropertyChanging();
 					if ((previousValue != null))
 					{
-						this._Alumnos.Entity = null;
+						this._Alumno.Entity = null;
 						previousValue.Examenes.Remove(this);
 					}
-					this._Alumnos.Entity = value;
+					this._Alumno.Entity = value;
 					if ((value != null))
 					{
 						value.Examenes.Add(this);
@@ -2740,65 +2031,31 @@ namespace capaDATOS.DataBase
 					{
 						this._AlumnoID = default(Nullable<int>);
 					}
-					this.SendPropertyChanged("Alumnos");
+					this.SendPropertyChanged("Alumno");
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Alumnos1_Examenes", Storage="_Alumnos1", ThisKey="AlumnoID", OtherKey="AlumnoID", IsForeignKey=true)]
-		public Alumnos1 Alumnos1
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Curso_Examene", Storage="_Curso", ThisKey="CursoID", OtherKey="CursoID", IsForeignKey=true)]
+		public Curso Curso
 		{
 			get
 			{
-				return this._Alumnos1.Entity;
+				return this._Curso.Entity;
 			}
 			set
 			{
-				Alumnos1 previousValue = this._Alumnos1.Entity;
+				Curso previousValue = this._Curso.Entity;
 				if (((previousValue != value) 
-							|| (this._Alumnos1.HasLoadedOrAssignedValue == false)))
+							|| (this._Curso.HasLoadedOrAssignedValue == false)))
 				{
 					this.SendPropertyChanging();
 					if ((previousValue != null))
 					{
-						this._Alumnos1.Entity = null;
+						this._Curso.Entity = null;
 						previousValue.Examenes.Remove(this);
 					}
-					this._Alumnos1.Entity = value;
-					if ((value != null))
-					{
-						value.Examenes.Add(this);
-						this._AlumnoID = value.AlumnoID;
-					}
-					else
-					{
-						this._AlumnoID = default(Nullable<int>);
-					}
-					this.SendPropertyChanged("Alumnos1");
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Cursos_Examenes", Storage="_Cursos", ThisKey="CursoID", OtherKey="CursoID", IsForeignKey=true)]
-		public Cursos Cursos
-		{
-			get
-			{
-				return this._Cursos.Entity;
-			}
-			set
-			{
-				Cursos previousValue = this._Cursos.Entity;
-				if (((previousValue != value) 
-							|| (this._Cursos.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._Cursos.Entity = null;
-						previousValue.Examenes.Remove(this);
-					}
-					this._Cursos.Entity = value;
+					this._Curso.Entity = value;
 					if ((value != null))
 					{
 						value.Examenes.Add(this);
@@ -2808,7 +2065,7 @@ namespace capaDATOS.DataBase
 					{
 						this._CursoID = default(Nullable<int>);
 					}
-					this.SendPropertyChanged("Cursos");
+					this.SendPropertyChanged("Curso");
 				}
 			}
 		}
@@ -2832,22 +2089,10 @@ namespace capaDATOS.DataBase
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
 		}
-		
-		private void attach_CalendarioAcademicoxExamen(CalendarioAcademicoxExamen entity)
-		{
-			this.SendPropertyChanging();
-			entity.Examenes = this;
-		}
-		
-		private void detach_CalendarioAcademicoxExamen(CalendarioAcademicoxExamen entity)
-		{
-			this.SendPropertyChanging();
-			entity.Examenes = null;
-		}
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Profesores")]
-	public partial class Profesores : INotifyPropertyChanging, INotifyPropertyChanged
+	public partial class Profesore : INotifyPropertyChanging, INotifyPropertyChanged
 	{
 		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
@@ -2858,7 +2103,7 @@ namespace capaDATOS.DataBase
 		
 		private string _Cédula;
 		
-		private EntitySet<ProfesorxCurso> _ProfesorxCurso;
+		private EntitySet<ProfesorxCurso> _ProfesorxCursos;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
@@ -2872,9 +2117,9 @@ namespace capaDATOS.DataBase
     partial void OnCédulaChanged();
     #endregion
 		
-		public Profesores()
+		public Profesore()
 		{
-			this._ProfesorxCurso = new EntitySet<ProfesorxCurso>(new Action<ProfesorxCurso>(this.attach_ProfesorxCurso), new Action<ProfesorxCurso>(this.detach_ProfesorxCurso));
+			this._ProfesorxCursos = new EntitySet<ProfesorxCurso>(new Action<ProfesorxCurso>(this.attach_ProfesorxCursos), new Action<ProfesorxCurso>(this.detach_ProfesorxCursos));
 			OnCreated();
 		}
 		
@@ -2938,16 +2183,16 @@ namespace capaDATOS.DataBase
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Profesores_ProfesorxCurso", Storage="_ProfesorxCurso", ThisKey="ProfesorID", OtherKey="ProfesorID")]
-		public EntitySet<ProfesorxCurso> ProfesorxCurso
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Profesore_ProfesorxCurso", Storage="_ProfesorxCursos", ThisKey="ProfesorID", OtherKey="ProfesorID")]
+		public EntitySet<ProfesorxCurso> ProfesorxCursos
 		{
 			get
 			{
-				return this._ProfesorxCurso;
+				return this._ProfesorxCursos;
 			}
 			set
 			{
-				this._ProfesorxCurso.Assign(value);
+				this._ProfesorxCursos.Assign(value);
 			}
 		}
 		
@@ -2971,16 +2216,16 @@ namespace capaDATOS.DataBase
 			}
 		}
 		
-		private void attach_ProfesorxCurso(ProfesorxCurso entity)
+		private void attach_ProfesorxCursos(ProfesorxCurso entity)
 		{
 			this.SendPropertyChanging();
-			entity.Profesores = this;
+			entity.Profesore = this;
 		}
 		
-		private void detach_ProfesorxCurso(ProfesorxCurso entity)
+		private void detach_ProfesorxCursos(ProfesorxCurso entity)
 		{
 			this.SendPropertyChanging();
-			entity.Profesores = null;
+			entity.Profesore = null;
 		}
 	}
 	
@@ -2998,9 +2243,9 @@ namespace capaDATOS.DataBase
 		
 		private string _Descripción;
 		
-		private EntityRef<Cursos> _Cursos;
+		private EntityRef<Curso> _Curso;
 		
-		private EntityRef<Profesores> _Profesores;
+		private EntityRef<Profesore> _Profesore;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
@@ -3018,8 +2263,8 @@ namespace capaDATOS.DataBase
 		
 		public ProfesorxCurso()
 		{
-			this._Cursos = default(EntityRef<Cursos>);
-			this._Profesores = default(EntityRef<Profesores>);
+			this._Curso = default(EntityRef<Curso>);
+			this._Profesore = default(EntityRef<Profesore>);
 			OnCreated();
 		}
 		
@@ -3054,7 +2299,7 @@ namespace capaDATOS.DataBase
 			{
 				if ((this._ProfesorID != value))
 				{
-					if (this._Profesores.HasLoadedOrAssignedValue)
+					if (this._Profesore.HasLoadedOrAssignedValue)
 					{
 						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
 					}
@@ -3078,7 +2323,7 @@ namespace capaDATOS.DataBase
 			{
 				if ((this._CursoID != value))
 				{
-					if (this._Cursos.HasLoadedOrAssignedValue)
+					if (this._Curso.HasLoadedOrAssignedValue)
 					{
 						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
 					}
@@ -3111,70 +2356,70 @@ namespace capaDATOS.DataBase
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Cursos_ProfesorxCurso", Storage="_Cursos", ThisKey="CursoID", OtherKey="CursoID", IsForeignKey=true)]
-		public Cursos Cursos
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Curso_ProfesorxCurso", Storage="_Curso", ThisKey="CursoID", OtherKey="CursoID", IsForeignKey=true)]
+		public Curso Curso
 		{
 			get
 			{
-				return this._Cursos.Entity;
+				return this._Curso.Entity;
 			}
 			set
 			{
-				Cursos previousValue = this._Cursos.Entity;
+				Curso previousValue = this._Curso.Entity;
 				if (((previousValue != value) 
-							|| (this._Cursos.HasLoadedOrAssignedValue == false)))
+							|| (this._Curso.HasLoadedOrAssignedValue == false)))
 				{
 					this.SendPropertyChanging();
 					if ((previousValue != null))
 					{
-						this._Cursos.Entity = null;
-						previousValue.ProfesorxCurso.Remove(this);
+						this._Curso.Entity = null;
+						previousValue.ProfesorxCursos.Remove(this);
 					}
-					this._Cursos.Entity = value;
+					this._Curso.Entity = value;
 					if ((value != null))
 					{
-						value.ProfesorxCurso.Add(this);
+						value.ProfesorxCursos.Add(this);
 						this._CursoID = value.CursoID;
 					}
 					else
 					{
 						this._CursoID = default(Nullable<int>);
 					}
-					this.SendPropertyChanged("Cursos");
+					this.SendPropertyChanged("Curso");
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Profesores_ProfesorxCurso", Storage="_Profesores", ThisKey="ProfesorID", OtherKey="ProfesorID", IsForeignKey=true)]
-		public Profesores Profesores
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Profesore_ProfesorxCurso", Storage="_Profesore", ThisKey="ProfesorID", OtherKey="ProfesorID", IsForeignKey=true)]
+		public Profesore Profesore
 		{
 			get
 			{
-				return this._Profesores.Entity;
+				return this._Profesore.Entity;
 			}
 			set
 			{
-				Profesores previousValue = this._Profesores.Entity;
+				Profesore previousValue = this._Profesore.Entity;
 				if (((previousValue != value) 
-							|| (this._Profesores.HasLoadedOrAssignedValue == false)))
+							|| (this._Profesore.HasLoadedOrAssignedValue == false)))
 				{
 					this.SendPropertyChanging();
 					if ((previousValue != null))
 					{
-						this._Profesores.Entity = null;
-						previousValue.ProfesorxCurso.Remove(this);
+						this._Profesore.Entity = null;
+						previousValue.ProfesorxCursos.Remove(this);
 					}
-					this._Profesores.Entity = value;
+					this._Profesore.Entity = value;
 					if ((value != null))
 					{
-						value.ProfesorxCurso.Add(this);
+						value.ProfesorxCursos.Add(this);
 						this._ProfesorID = value.ProfesorID;
 					}
 					else
 					{
 						this._ProfesorID = default(Nullable<int>);
 					}
-					this.SendPropertyChanged("Profesores");
+					this.SendPropertyChanged("Profesore");
 				}
 			}
 		}
@@ -3214,9 +2459,9 @@ namespace capaDATOS.DataBase
 		
 		private string _Descripción;
 		
-		private EntitySet<AlumnosxRecursosAprendizaje> _AlumnosxRecursosAprendizaje;
+		private EntitySet<AlumnosxRecursosAprendizaje> _AlumnosxRecursosAprendizajes;
 		
-		private EntitySet<CalendarioAcademicoxRecursosAprendizaje> _CalendarioAcademicoxRecursosAprendizaje;
+		private EntitySet<CalendarioAcademicoxRecursosAprendizaje> _CalendarioAcademicoxRecursosAprendizajes;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
@@ -3234,8 +2479,8 @@ namespace capaDATOS.DataBase
 		
 		public RecursosAprendizaje()
 		{
-			this._AlumnosxRecursosAprendizaje = new EntitySet<AlumnosxRecursosAprendizaje>(new Action<AlumnosxRecursosAprendizaje>(this.attach_AlumnosxRecursosAprendizaje), new Action<AlumnosxRecursosAprendizaje>(this.detach_AlumnosxRecursosAprendizaje));
-			this._CalendarioAcademicoxRecursosAprendizaje = new EntitySet<CalendarioAcademicoxRecursosAprendizaje>(new Action<CalendarioAcademicoxRecursosAprendizaje>(this.attach_CalendarioAcademicoxRecursosAprendizaje), new Action<CalendarioAcademicoxRecursosAprendizaje>(this.detach_CalendarioAcademicoxRecursosAprendizaje));
+			this._AlumnosxRecursosAprendizajes = new EntitySet<AlumnosxRecursosAprendizaje>(new Action<AlumnosxRecursosAprendizaje>(this.attach_AlumnosxRecursosAprendizajes), new Action<AlumnosxRecursosAprendizaje>(this.detach_AlumnosxRecursosAprendizajes));
+			this._CalendarioAcademicoxRecursosAprendizajes = new EntitySet<CalendarioAcademicoxRecursosAprendizaje>(new Action<CalendarioAcademicoxRecursosAprendizaje>(this.attach_CalendarioAcademicoxRecursosAprendizajes), new Action<CalendarioAcademicoxRecursosAprendizaje>(this.detach_CalendarioAcademicoxRecursosAprendizajes));
 			OnCreated();
 		}
 		
@@ -3319,29 +2564,29 @@ namespace capaDATOS.DataBase
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="RecursosAprendizaje_AlumnosxRecursosAprendizaje", Storage="_AlumnosxRecursosAprendizaje", ThisKey="RecursosAprendizajeID", OtherKey="RecursosAprendizajeID")]
-		public EntitySet<AlumnosxRecursosAprendizaje> AlumnosxRecursosAprendizaje
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="RecursosAprendizaje_AlumnosxRecursosAprendizaje", Storage="_AlumnosxRecursosAprendizajes", ThisKey="RecursosAprendizajeID", OtherKey="RecursosAprendizajeID")]
+		public EntitySet<AlumnosxRecursosAprendizaje> AlumnosxRecursosAprendizajes
 		{
 			get
 			{
-				return this._AlumnosxRecursosAprendizaje;
+				return this._AlumnosxRecursosAprendizajes;
 			}
 			set
 			{
-				this._AlumnosxRecursosAprendizaje.Assign(value);
+				this._AlumnosxRecursosAprendizajes.Assign(value);
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="RecursosAprendizaje_CalendarioAcademicoxRecursosAprendizaje", Storage="_CalendarioAcademicoxRecursosAprendizaje", ThisKey="RecursosAprendizajeID", OtherKey="RecursosAprendizajeID")]
-		public EntitySet<CalendarioAcademicoxRecursosAprendizaje> CalendarioAcademicoxRecursosAprendizaje
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="RecursosAprendizaje_CalendarioAcademicoxRecursosAprendizaje", Storage="_CalendarioAcademicoxRecursosAprendizajes", ThisKey="RecursosAprendizajeID", OtherKey="RecursosAprendizajeID")]
+		public EntitySet<CalendarioAcademicoxRecursosAprendizaje> CalendarioAcademicoxRecursosAprendizajes
 		{
 			get
 			{
-				return this._CalendarioAcademicoxRecursosAprendizaje;
+				return this._CalendarioAcademicoxRecursosAprendizajes;
 			}
 			set
 			{
-				this._CalendarioAcademicoxRecursosAprendizaje.Assign(value);
+				this._CalendarioAcademicoxRecursosAprendizajes.Assign(value);
 			}
 		}
 		
@@ -3365,25 +2610,25 @@ namespace capaDATOS.DataBase
 			}
 		}
 		
-		private void attach_AlumnosxRecursosAprendizaje(AlumnosxRecursosAprendizaje entity)
+		private void attach_AlumnosxRecursosAprendizajes(AlumnosxRecursosAprendizaje entity)
 		{
 			this.SendPropertyChanging();
 			entity.RecursosAprendizaje = this;
 		}
 		
-		private void detach_AlumnosxRecursosAprendizaje(AlumnosxRecursosAprendizaje entity)
+		private void detach_AlumnosxRecursosAprendizajes(AlumnosxRecursosAprendizaje entity)
 		{
 			this.SendPropertyChanging();
 			entity.RecursosAprendizaje = null;
 		}
 		
-		private void attach_CalendarioAcademicoxRecursosAprendizaje(CalendarioAcademicoxRecursosAprendizaje entity)
+		private void attach_CalendarioAcademicoxRecursosAprendizajes(CalendarioAcademicoxRecursosAprendizaje entity)
 		{
 			this.SendPropertyChanging();
 			entity.RecursosAprendizaje = this;
 		}
 		
-		private void detach_CalendarioAcademicoxRecursosAprendizaje(CalendarioAcademicoxRecursosAprendizaje entity)
+		private void detach_CalendarioAcademicoxRecursosAprendizajes(CalendarioAcademicoxRecursosAprendizaje entity)
 		{
 			this.SendPropertyChanging();
 			entity.RecursosAprendizaje = null;
@@ -3391,7 +2636,7 @@ namespace capaDATOS.DataBase
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Tareas")]
-	public partial class Tareas : INotifyPropertyChanging, INotifyPropertyChanged
+	public partial class Tarea : INotifyPropertyChanging, INotifyPropertyChanged
 	{
 		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
@@ -3408,11 +2653,9 @@ namespace capaDATOS.DataBase
 		
 		private string _Descripción;
 		
-		private EntityRef<Alumnos> _Alumnos;
+		private EntityRef<Alumno> _Alumno;
 		
-		private EntityRef<Alumnos1> _Alumnos1;
-		
-		private EntityRef<Cursos> _Cursos;
+		private EntityRef<Curso> _Curso;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
@@ -3432,11 +2675,10 @@ namespace capaDATOS.DataBase
     partial void OnDescripciónChanged();
     #endregion
 		
-		public Tareas()
+		public Tarea()
 		{
-			this._Alumnos = default(EntityRef<Alumnos>);
-			this._Alumnos1 = default(EntityRef<Alumnos1>);
-			this._Cursos = default(EntityRef<Cursos>);
+			this._Alumno = default(EntityRef<Alumno>);
+			this._Curso = default(EntityRef<Curso>);
 			OnCreated();
 		}
 		
@@ -3471,7 +2713,7 @@ namespace capaDATOS.DataBase
 			{
 				if ((this._AlumnoID != value))
 				{
-					if ((this._Alumnos.HasLoadedOrAssignedValue || this._Alumnos1.HasLoadedOrAssignedValue))
+					if (this._Alumno.HasLoadedOrAssignedValue)
 					{
 						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
 					}
@@ -3495,7 +2737,7 @@ namespace capaDATOS.DataBase
 			{
 				if ((this._CursoID != value))
 				{
-					if (this._Cursos.HasLoadedOrAssignedValue)
+					if (this._Curso.HasLoadedOrAssignedValue)
 					{
 						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
 					}
@@ -3568,26 +2810,26 @@ namespace capaDATOS.DataBase
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Alumnos_Tareas", Storage="_Alumnos", ThisKey="AlumnoID", OtherKey="AlumnoID", IsForeignKey=true)]
-		public Alumnos Alumnos
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Alumno_Tarea", Storage="_Alumno", ThisKey="AlumnoID", OtherKey="AlumnoID", IsForeignKey=true)]
+		public Alumno Alumno
 		{
 			get
 			{
-				return this._Alumnos.Entity;
+				return this._Alumno.Entity;
 			}
 			set
 			{
-				Alumnos previousValue = this._Alumnos.Entity;
+				Alumno previousValue = this._Alumno.Entity;
 				if (((previousValue != value) 
-							|| (this._Alumnos.HasLoadedOrAssignedValue == false)))
+							|| (this._Alumno.HasLoadedOrAssignedValue == false)))
 				{
 					this.SendPropertyChanging();
 					if ((previousValue != null))
 					{
-						this._Alumnos.Entity = null;
+						this._Alumno.Entity = null;
 						previousValue.Tareas.Remove(this);
 					}
-					this._Alumnos.Entity = value;
+					this._Alumno.Entity = value;
 					if ((value != null))
 					{
 						value.Tareas.Add(this);
@@ -3597,65 +2839,31 @@ namespace capaDATOS.DataBase
 					{
 						this._AlumnoID = default(Nullable<int>);
 					}
-					this.SendPropertyChanged("Alumnos");
+					this.SendPropertyChanged("Alumno");
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Alumnos1_Tareas", Storage="_Alumnos1", ThisKey="AlumnoID", OtherKey="AlumnoID", IsForeignKey=true)]
-		public Alumnos1 Alumnos1
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Curso_Tarea", Storage="_Curso", ThisKey="CursoID", OtherKey="CursoID", IsForeignKey=true)]
+		public Curso Curso
 		{
 			get
 			{
-				return this._Alumnos1.Entity;
+				return this._Curso.Entity;
 			}
 			set
 			{
-				Alumnos1 previousValue = this._Alumnos1.Entity;
+				Curso previousValue = this._Curso.Entity;
 				if (((previousValue != value) 
-							|| (this._Alumnos1.HasLoadedOrAssignedValue == false)))
+							|| (this._Curso.HasLoadedOrAssignedValue == false)))
 				{
 					this.SendPropertyChanging();
 					if ((previousValue != null))
 					{
-						this._Alumnos1.Entity = null;
+						this._Curso.Entity = null;
 						previousValue.Tareas.Remove(this);
 					}
-					this._Alumnos1.Entity = value;
-					if ((value != null))
-					{
-						value.Tareas.Add(this);
-						this._AlumnoID = value.AlumnoID;
-					}
-					else
-					{
-						this._AlumnoID = default(Nullable<int>);
-					}
-					this.SendPropertyChanged("Alumnos1");
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Cursos_Tareas", Storage="_Cursos", ThisKey="CursoID", OtherKey="CursoID", IsForeignKey=true)]
-		public Cursos Cursos
-		{
-			get
-			{
-				return this._Cursos.Entity;
-			}
-			set
-			{
-				Cursos previousValue = this._Cursos.Entity;
-				if (((previousValue != value) 
-							|| (this._Cursos.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._Cursos.Entity = null;
-						previousValue.Tareas.Remove(this);
-					}
-					this._Cursos.Entity = value;
+					this._Curso.Entity = value;
 					if ((value != null))
 					{
 						value.Tareas.Add(this);
@@ -3665,7 +2873,7 @@ namespace capaDATOS.DataBase
 					{
 						this._CursoID = default(Nullable<int>);
 					}
-					this.SendPropertyChanged("Cursos");
+					this.SendPropertyChanged("Curso");
 				}
 			}
 		}
@@ -3972,12 +3180,12 @@ namespace capaDATOS.DataBase
 					if ((previousValue != null))
 					{
 						this._TM_Usuario.Entity = null;
-						previousValue.TD_Login.Remove(this);
+						previousValue.TD_Logins.Remove(this);
 					}
 					this._TM_Usuario.Entity = value;
 					if ((value != null))
 					{
-						value.TD_Login.Add(this);
+						value.TD_Logins.Add(this);
 						this._IdUser = value.IdUser;
 					}
 					else
@@ -4036,9 +3244,9 @@ namespace capaDATOS.DataBase
 		
 		private System.Nullable<bool> _FlagActivo;
 		
-		private EntityRef<TM_Usuario> _TM_Usuario;
+		private EntityRef<TM_Role> _TM_Role;
 		
-		private EntityRef<TM_Roles> _TM_Roles;
+		private EntityRef<TM_Usuario> _TM_Usuario;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
@@ -4068,8 +3276,8 @@ namespace capaDATOS.DataBase
 		
 		public TD_RolesxUsuario()
 		{
+			this._TM_Role = default(EntityRef<TM_Role>);
 			this._TM_Usuario = default(EntityRef<TM_Usuario>);
-			this._TM_Roles = default(EntityRef<TM_Roles>);
 			OnCreated();
 		}
 		
@@ -4104,7 +3312,7 @@ namespace capaDATOS.DataBase
 			{
 				if ((this._IdRoles != value))
 				{
-					if (this._TM_Roles.HasLoadedOrAssignedValue)
+					if (this._TM_Role.HasLoadedOrAssignedValue)
 					{
 						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
 					}
@@ -4281,6 +3489,40 @@ namespace capaDATOS.DataBase
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TM_Role_TD_RolesxUsuario", Storage="_TM_Role", ThisKey="IdRoles", OtherKey="IdRoles", IsForeignKey=true)]
+		public TM_Role TM_Role
+		{
+			get
+			{
+				return this._TM_Role.Entity;
+			}
+			set
+			{
+				TM_Role previousValue = this._TM_Role.Entity;
+				if (((previousValue != value) 
+							|| (this._TM_Role.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._TM_Role.Entity = null;
+						previousValue.TD_RolesxUsuarios.Remove(this);
+					}
+					this._TM_Role.Entity = value;
+					if ((value != null))
+					{
+						value.TD_RolesxUsuarios.Add(this);
+						this._IdRoles = value.IdRoles;
+					}
+					else
+					{
+						this._IdRoles = default(int);
+					}
+					this.SendPropertyChanged("TM_Role");
+				}
+			}
+		}
+		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TM_Usuario_TD_RolesxUsuario", Storage="_TM_Usuario", ThisKey="IdUser", OtherKey="IdUser", IsForeignKey=true)]
 		public TM_Usuario TM_Usuario
 		{
@@ -4298,12 +3540,12 @@ namespace capaDATOS.DataBase
 					if ((previousValue != null))
 					{
 						this._TM_Usuario.Entity = null;
-						previousValue.TD_RolesxUsuario.Remove(this);
+						previousValue.TD_RolesxUsuarios.Remove(this);
 					}
 					this._TM_Usuario.Entity = value;
 					if ((value != null))
 					{
-						value.TD_RolesxUsuario.Add(this);
+						value.TD_RolesxUsuarios.Add(this);
 						this._IdUser = value.IdUser;
 					}
 					else
@@ -4315,40 +3557,6 @@ namespace capaDATOS.DataBase
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TM_Roles_TD_RolesxUsuario", Storage="_TM_Roles", ThisKey="IdRoles", OtherKey="IdRoles", IsForeignKey=true)]
-		public TM_Roles TM_Roles
-		{
-			get
-			{
-				return this._TM_Roles.Entity;
-			}
-			set
-			{
-				TM_Roles previousValue = this._TM_Roles.Entity;
-				if (((previousValue != value) 
-							|| (this._TM_Roles.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._TM_Roles.Entity = null;
-						previousValue.TD_RolesxUsuario.Remove(this);
-					}
-					this._TM_Roles.Entity = value;
-					if ((value != null))
-					{
-						value.TD_RolesxUsuario.Add(this);
-						this._IdRoles = value.IdRoles;
-					}
-					else
-					{
-						this._IdRoles = default(int);
-					}
-					this.SendPropertyChanged("TM_Roles");
-				}
-			}
-		}
-		
 		public event PropertyChangingEventHandler PropertyChanging;
 		
 		public event PropertyChangedEventHandler PropertyChanged;
@@ -4366,387 +3574,6 @@ namespace capaDATOS.DataBase
 			if ((this.PropertyChanged != null))
 			{
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.TM_Roles")]
-	public partial class TM_Roles : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _IdRoles;
-		
-		private string _Descripcion;
-		
-		private string _CreateBy;
-		
-		private string _ModifyBy;
-		
-		private string _CancelBy;
-		
-		private System.Nullable<System.DateTime> _FecCreate;
-		
-		private System.Nullable<System.DateTime> _FecModify;
-		
-		private System.Nullable<System.DateTime> _FecCancel;
-		
-		private System.Nullable<bool> _FlagActivo;
-		
-		private EntitySet<TD_RolesxUsuario> _TD_RolesxUsuario;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnIdRolesChanging(int value);
-    partial void OnIdRolesChanged();
-    partial void OnDescripcionChanging(string value);
-    partial void OnDescripcionChanged();
-    partial void OnCreateByChanging(string value);
-    partial void OnCreateByChanged();
-    partial void OnModifyByChanging(string value);
-    partial void OnModifyByChanged();
-    partial void OnCancelByChanging(string value);
-    partial void OnCancelByChanged();
-    partial void OnFecCreateChanging(System.Nullable<System.DateTime> value);
-    partial void OnFecCreateChanged();
-    partial void OnFecModifyChanging(System.Nullable<System.DateTime> value);
-    partial void OnFecModifyChanged();
-    partial void OnFecCancelChanging(System.Nullable<System.DateTime> value);
-    partial void OnFecCancelChanged();
-    partial void OnFlagActivoChanging(System.Nullable<bool> value);
-    partial void OnFlagActivoChanged();
-    #endregion
-		
-		public TM_Roles()
-		{
-			this._TD_RolesxUsuario = new EntitySet<TD_RolesxUsuario>(new Action<TD_RolesxUsuario>(this.attach_TD_RolesxUsuario), new Action<TD_RolesxUsuario>(this.detach_TD_RolesxUsuario));
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IdRoles", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public int IdRoles
-		{
-			get
-			{
-				return this._IdRoles;
-			}
-			set
-			{
-				if ((this._IdRoles != value))
-				{
-					this.OnIdRolesChanging(value);
-					this.SendPropertyChanging();
-					this._IdRoles = value;
-					this.SendPropertyChanged("IdRoles");
-					this.OnIdRolesChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Descripcion", DbType="NVarChar(30)")]
-		public string Descripcion
-		{
-			get
-			{
-				return this._Descripcion;
-			}
-			set
-			{
-				if ((this._Descripcion != value))
-				{
-					this.OnDescripcionChanging(value);
-					this.SendPropertyChanging();
-					this._Descripcion = value;
-					this.SendPropertyChanged("Descripcion");
-					this.OnDescripcionChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CreateBy", DbType="NVarChar(25)")]
-		public string CreateBy
-		{
-			get
-			{
-				return this._CreateBy;
-			}
-			set
-			{
-				if ((this._CreateBy != value))
-				{
-					this.OnCreateByChanging(value);
-					this.SendPropertyChanging();
-					this._CreateBy = value;
-					this.SendPropertyChanged("CreateBy");
-					this.OnCreateByChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ModifyBy", DbType="NVarChar(25)")]
-		public string ModifyBy
-		{
-			get
-			{
-				return this._ModifyBy;
-			}
-			set
-			{
-				if ((this._ModifyBy != value))
-				{
-					this.OnModifyByChanging(value);
-					this.SendPropertyChanging();
-					this._ModifyBy = value;
-					this.SendPropertyChanged("ModifyBy");
-					this.OnModifyByChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CancelBy", DbType="NVarChar(25)")]
-		public string CancelBy
-		{
-			get
-			{
-				return this._CancelBy;
-			}
-			set
-			{
-				if ((this._CancelBy != value))
-				{
-					this.OnCancelByChanging(value);
-					this.SendPropertyChanging();
-					this._CancelBy = value;
-					this.SendPropertyChanged("CancelBy");
-					this.OnCancelByChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FecCreate", DbType="Date")]
-		public System.Nullable<System.DateTime> FecCreate
-		{
-			get
-			{
-				return this._FecCreate;
-			}
-			set
-			{
-				if ((this._FecCreate != value))
-				{
-					this.OnFecCreateChanging(value);
-					this.SendPropertyChanging();
-					this._FecCreate = value;
-					this.SendPropertyChanged("FecCreate");
-					this.OnFecCreateChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FecModify", DbType="Date")]
-		public System.Nullable<System.DateTime> FecModify
-		{
-			get
-			{
-				return this._FecModify;
-			}
-			set
-			{
-				if ((this._FecModify != value))
-				{
-					this.OnFecModifyChanging(value);
-					this.SendPropertyChanging();
-					this._FecModify = value;
-					this.SendPropertyChanged("FecModify");
-					this.OnFecModifyChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FecCancel", DbType="Date")]
-		public System.Nullable<System.DateTime> FecCancel
-		{
-			get
-			{
-				return this._FecCancel;
-			}
-			set
-			{
-				if ((this._FecCancel != value))
-				{
-					this.OnFecCancelChanging(value);
-					this.SendPropertyChanging();
-					this._FecCancel = value;
-					this.SendPropertyChanged("FecCancel");
-					this.OnFecCancelChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FlagActivo", DbType="Bit")]
-		public System.Nullable<bool> FlagActivo
-		{
-			get
-			{
-				return this._FlagActivo;
-			}
-			set
-			{
-				if ((this._FlagActivo != value))
-				{
-					this.OnFlagActivoChanging(value);
-					this.SendPropertyChanging();
-					this._FlagActivo = value;
-					this.SendPropertyChanged("FlagActivo");
-					this.OnFlagActivoChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TM_Roles_TD_RolesxUsuario", Storage="_TD_RolesxUsuario", ThisKey="IdRoles", OtherKey="IdRoles")]
-		public EntitySet<TD_RolesxUsuario> TD_RolesxUsuario
-		{
-			get
-			{
-				return this._TD_RolesxUsuario;
-			}
-			set
-			{
-				this._TD_RolesxUsuario.Assign(value);
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-		
-		private void attach_TD_RolesxUsuario(TD_RolesxUsuario entity)
-		{
-			this.SendPropertyChanging();
-			entity.TM_Roles = this;
-		}
-		
-		private void detach_TD_RolesxUsuario(TD_RolesxUsuario entity)
-		{
-			this.SendPropertyChanging();
-			entity.TM_Roles = null;
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.vw_Usuarios")]
-	public partial class vw_Usuarios
-	{
-		
-		private int _codUsuario;
-		
-		private string _nomUsuario;
-		
-		private System.Nullable<bool> _EstatusUsuario;
-		
-		private string _perfilUsuario;
-		
-		private System.Nullable<bool> _EstatusLogin;
-		
-		public vw_Usuarios()
-		{
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_codUsuario", DbType="Int NOT NULL")]
-		public int codUsuario
-		{
-			get
-			{
-				return this._codUsuario;
-			}
-			set
-			{
-				if ((this._codUsuario != value))
-				{
-					this._codUsuario = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_nomUsuario", DbType="NVarChar(30)")]
-		public string nomUsuario
-		{
-			get
-			{
-				return this._nomUsuario;
-			}
-			set
-			{
-				if ((this._nomUsuario != value))
-				{
-					this._nomUsuario = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_EstatusUsuario", DbType="Bit")]
-		public System.Nullable<bool> EstatusUsuario
-		{
-			get
-			{
-				return this._EstatusUsuario;
-			}
-			set
-			{
-				if ((this._EstatusUsuario != value))
-				{
-					this._EstatusUsuario = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_perfilUsuario", DbType="NVarChar(250)")]
-		public string perfilUsuario
-		{
-			get
-			{
-				return this._perfilUsuario;
-			}
-			set
-			{
-				if ((this._perfilUsuario != value))
-				{
-					this._perfilUsuario = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_EstatusLogin", DbType="Bit")]
-		public System.Nullable<bool> EstatusLogin
-		{
-			get
-			{
-				return this._EstatusLogin;
-			}
-			set
-			{
-				if ((this._EstatusLogin != value))
-				{
-					this._EstatusLogin = value;
-				}
 			}
 		}
 	}
@@ -5002,6 +3829,622 @@ namespace capaDATOS.DataBase
 			{
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.TM_Roles")]
+	public partial class TM_Role : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _IdRoles;
+		
+		private string _Descripcion;
+		
+		private string _CreateBy;
+		
+		private string _ModifyBy;
+		
+		private string _CancelBy;
+		
+		private System.Nullable<System.DateTime> _FecCreate;
+		
+		private System.Nullable<System.DateTime> _FecModify;
+		
+		private System.Nullable<System.DateTime> _FecCancel;
+		
+		private System.Nullable<bool> _FlagActivo;
+		
+		private EntitySet<TD_RolesxUsuario> _TD_RolesxUsuarios;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnIdRolesChanging(int value);
+    partial void OnIdRolesChanged();
+    partial void OnDescripcionChanging(string value);
+    partial void OnDescripcionChanged();
+    partial void OnCreateByChanging(string value);
+    partial void OnCreateByChanged();
+    partial void OnModifyByChanging(string value);
+    partial void OnModifyByChanged();
+    partial void OnCancelByChanging(string value);
+    partial void OnCancelByChanged();
+    partial void OnFecCreateChanging(System.Nullable<System.DateTime> value);
+    partial void OnFecCreateChanged();
+    partial void OnFecModifyChanging(System.Nullable<System.DateTime> value);
+    partial void OnFecModifyChanged();
+    partial void OnFecCancelChanging(System.Nullable<System.DateTime> value);
+    partial void OnFecCancelChanged();
+    partial void OnFlagActivoChanging(System.Nullable<bool> value);
+    partial void OnFlagActivoChanged();
+    #endregion
+		
+		public TM_Role()
+		{
+			this._TD_RolesxUsuarios = new EntitySet<TD_RolesxUsuario>(new Action<TD_RolesxUsuario>(this.attach_TD_RolesxUsuarios), new Action<TD_RolesxUsuario>(this.detach_TD_RolesxUsuarios));
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IdRoles", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int IdRoles
+		{
+			get
+			{
+				return this._IdRoles;
+			}
+			set
+			{
+				if ((this._IdRoles != value))
+				{
+					this.OnIdRolesChanging(value);
+					this.SendPropertyChanging();
+					this._IdRoles = value;
+					this.SendPropertyChanged("IdRoles");
+					this.OnIdRolesChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Descripcion", DbType="NVarChar(30)")]
+		public string Descripcion
+		{
+			get
+			{
+				return this._Descripcion;
+			}
+			set
+			{
+				if ((this._Descripcion != value))
+				{
+					this.OnDescripcionChanging(value);
+					this.SendPropertyChanging();
+					this._Descripcion = value;
+					this.SendPropertyChanged("Descripcion");
+					this.OnDescripcionChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CreateBy", DbType="NVarChar(25)")]
+		public string CreateBy
+		{
+			get
+			{
+				return this._CreateBy;
+			}
+			set
+			{
+				if ((this._CreateBy != value))
+				{
+					this.OnCreateByChanging(value);
+					this.SendPropertyChanging();
+					this._CreateBy = value;
+					this.SendPropertyChanged("CreateBy");
+					this.OnCreateByChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ModifyBy", DbType="NVarChar(25)")]
+		public string ModifyBy
+		{
+			get
+			{
+				return this._ModifyBy;
+			}
+			set
+			{
+				if ((this._ModifyBy != value))
+				{
+					this.OnModifyByChanging(value);
+					this.SendPropertyChanging();
+					this._ModifyBy = value;
+					this.SendPropertyChanged("ModifyBy");
+					this.OnModifyByChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CancelBy", DbType="NVarChar(25)")]
+		public string CancelBy
+		{
+			get
+			{
+				return this._CancelBy;
+			}
+			set
+			{
+				if ((this._CancelBy != value))
+				{
+					this.OnCancelByChanging(value);
+					this.SendPropertyChanging();
+					this._CancelBy = value;
+					this.SendPropertyChanged("CancelBy");
+					this.OnCancelByChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FecCreate", DbType="Date")]
+		public System.Nullable<System.DateTime> FecCreate
+		{
+			get
+			{
+				return this._FecCreate;
+			}
+			set
+			{
+				if ((this._FecCreate != value))
+				{
+					this.OnFecCreateChanging(value);
+					this.SendPropertyChanging();
+					this._FecCreate = value;
+					this.SendPropertyChanged("FecCreate");
+					this.OnFecCreateChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FecModify", DbType="Date")]
+		public System.Nullable<System.DateTime> FecModify
+		{
+			get
+			{
+				return this._FecModify;
+			}
+			set
+			{
+				if ((this._FecModify != value))
+				{
+					this.OnFecModifyChanging(value);
+					this.SendPropertyChanging();
+					this._FecModify = value;
+					this.SendPropertyChanged("FecModify");
+					this.OnFecModifyChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FecCancel", DbType="Date")]
+		public System.Nullable<System.DateTime> FecCancel
+		{
+			get
+			{
+				return this._FecCancel;
+			}
+			set
+			{
+				if ((this._FecCancel != value))
+				{
+					this.OnFecCancelChanging(value);
+					this.SendPropertyChanging();
+					this._FecCancel = value;
+					this.SendPropertyChanged("FecCancel");
+					this.OnFecCancelChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FlagActivo", DbType="Bit")]
+		public System.Nullable<bool> FlagActivo
+		{
+			get
+			{
+				return this._FlagActivo;
+			}
+			set
+			{
+				if ((this._FlagActivo != value))
+				{
+					this.OnFlagActivoChanging(value);
+					this.SendPropertyChanging();
+					this._FlagActivo = value;
+					this.SendPropertyChanged("FlagActivo");
+					this.OnFlagActivoChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TM_Role_TD_RolesxUsuario", Storage="_TD_RolesxUsuarios", ThisKey="IdRoles", OtherKey="IdRoles")]
+		public EntitySet<TD_RolesxUsuario> TD_RolesxUsuarios
+		{
+			get
+			{
+				return this._TD_RolesxUsuarios;
+			}
+			set
+			{
+				this._TD_RolesxUsuarios.Assign(value);
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void attach_TD_RolesxUsuarios(TD_RolesxUsuario entity)
+		{
+			this.SendPropertyChanging();
+			entity.TM_Role = this;
+		}
+		
+		private void detach_TD_RolesxUsuarios(TD_RolesxUsuario entity)
+		{
+			this.SendPropertyChanging();
+			entity.TM_Role = null;
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.TM_Usuario")]
+	public partial class TM_Usuario : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _IdUser;
+		
+		private string _UserName;
+		
+		private string _PasswordUser;
+		
+		private string _CreateBy;
+		
+		private string _ModifyBy;
+		
+		private string _CancelBy;
+		
+		private System.Nullable<System.DateTime> _FecCreate;
+		
+		private System.Nullable<System.DateTime> _FecModify;
+		
+		private System.Nullable<System.DateTime> _FecCancel;
+		
+		private System.Nullable<bool> _FlagActivo;
+		
+		private EntitySet<TD_Login> _TD_Logins;
+		
+		private EntitySet<TD_RolesxUsuario> _TD_RolesxUsuarios;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnIdUserChanging(int value);
+    partial void OnIdUserChanged();
+    partial void OnUserNameChanging(string value);
+    partial void OnUserNameChanged();
+    partial void OnPasswordUserChanging(string value);
+    partial void OnPasswordUserChanged();
+    partial void OnCreateByChanging(string value);
+    partial void OnCreateByChanged();
+    partial void OnModifyByChanging(string value);
+    partial void OnModifyByChanged();
+    partial void OnCancelByChanging(string value);
+    partial void OnCancelByChanged();
+    partial void OnFecCreateChanging(System.Nullable<System.DateTime> value);
+    partial void OnFecCreateChanged();
+    partial void OnFecModifyChanging(System.Nullable<System.DateTime> value);
+    partial void OnFecModifyChanged();
+    partial void OnFecCancelChanging(System.Nullable<System.DateTime> value);
+    partial void OnFecCancelChanged();
+    partial void OnFlagActivoChanging(System.Nullable<bool> value);
+    partial void OnFlagActivoChanged();
+    #endregion
+		
+		public TM_Usuario()
+		{
+			this._TD_Logins = new EntitySet<TD_Login>(new Action<TD_Login>(this.attach_TD_Logins), new Action<TD_Login>(this.detach_TD_Logins));
+			this._TD_RolesxUsuarios = new EntitySet<TD_RolesxUsuario>(new Action<TD_RolesxUsuario>(this.attach_TD_RolesxUsuarios), new Action<TD_RolesxUsuario>(this.detach_TD_RolesxUsuarios));
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IdUser", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int IdUser
+		{
+			get
+			{
+				return this._IdUser;
+			}
+			set
+			{
+				if ((this._IdUser != value))
+				{
+					this.OnIdUserChanging(value);
+					this.SendPropertyChanging();
+					this._IdUser = value;
+					this.SendPropertyChanged("IdUser");
+					this.OnIdUserChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UserName", DbType="NVarChar(30)")]
+		public string UserName
+		{
+			get
+			{
+				return this._UserName;
+			}
+			set
+			{
+				if ((this._UserName != value))
+				{
+					this.OnUserNameChanging(value);
+					this.SendPropertyChanging();
+					this._UserName = value;
+					this.SendPropertyChanged("UserName");
+					this.OnUserNameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PasswordUser", DbType="NVarChar(200)")]
+		public string PasswordUser
+		{
+			get
+			{
+				return this._PasswordUser;
+			}
+			set
+			{
+				if ((this._PasswordUser != value))
+				{
+					this.OnPasswordUserChanging(value);
+					this.SendPropertyChanging();
+					this._PasswordUser = value;
+					this.SendPropertyChanged("PasswordUser");
+					this.OnPasswordUserChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CreateBy", DbType="NVarChar(25)")]
+		public string CreateBy
+		{
+			get
+			{
+				return this._CreateBy;
+			}
+			set
+			{
+				if ((this._CreateBy != value))
+				{
+					this.OnCreateByChanging(value);
+					this.SendPropertyChanging();
+					this._CreateBy = value;
+					this.SendPropertyChanged("CreateBy");
+					this.OnCreateByChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ModifyBy", DbType="NVarChar(25)")]
+		public string ModifyBy
+		{
+			get
+			{
+				return this._ModifyBy;
+			}
+			set
+			{
+				if ((this._ModifyBy != value))
+				{
+					this.OnModifyByChanging(value);
+					this.SendPropertyChanging();
+					this._ModifyBy = value;
+					this.SendPropertyChanged("ModifyBy");
+					this.OnModifyByChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CancelBy", DbType="NVarChar(25)")]
+		public string CancelBy
+		{
+			get
+			{
+				return this._CancelBy;
+			}
+			set
+			{
+				if ((this._CancelBy != value))
+				{
+					this.OnCancelByChanging(value);
+					this.SendPropertyChanging();
+					this._CancelBy = value;
+					this.SendPropertyChanged("CancelBy");
+					this.OnCancelByChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FecCreate", DbType="Date")]
+		public System.Nullable<System.DateTime> FecCreate
+		{
+			get
+			{
+				return this._FecCreate;
+			}
+			set
+			{
+				if ((this._FecCreate != value))
+				{
+					this.OnFecCreateChanging(value);
+					this.SendPropertyChanging();
+					this._FecCreate = value;
+					this.SendPropertyChanged("FecCreate");
+					this.OnFecCreateChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FecModify", DbType="Date")]
+		public System.Nullable<System.DateTime> FecModify
+		{
+			get
+			{
+				return this._FecModify;
+			}
+			set
+			{
+				if ((this._FecModify != value))
+				{
+					this.OnFecModifyChanging(value);
+					this.SendPropertyChanging();
+					this._FecModify = value;
+					this.SendPropertyChanged("FecModify");
+					this.OnFecModifyChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FecCancel", DbType="Date")]
+		public System.Nullable<System.DateTime> FecCancel
+		{
+			get
+			{
+				return this._FecCancel;
+			}
+			set
+			{
+				if ((this._FecCancel != value))
+				{
+					this.OnFecCancelChanging(value);
+					this.SendPropertyChanging();
+					this._FecCancel = value;
+					this.SendPropertyChanged("FecCancel");
+					this.OnFecCancelChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FlagActivo", DbType="Bit")]
+		public System.Nullable<bool> FlagActivo
+		{
+			get
+			{
+				return this._FlagActivo;
+			}
+			set
+			{
+				if ((this._FlagActivo != value))
+				{
+					this.OnFlagActivoChanging(value);
+					this.SendPropertyChanging();
+					this._FlagActivo = value;
+					this.SendPropertyChanged("FlagActivo");
+					this.OnFlagActivoChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TM_Usuario_TD_Login", Storage="_TD_Logins", ThisKey="IdUser", OtherKey="IdUser")]
+		public EntitySet<TD_Login> TD_Logins
+		{
+			get
+			{
+				return this._TD_Logins;
+			}
+			set
+			{
+				this._TD_Logins.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TM_Usuario_TD_RolesxUsuario", Storage="_TD_RolesxUsuarios", ThisKey="IdUser", OtherKey="IdUser")]
+		public EntitySet<TD_RolesxUsuario> TD_RolesxUsuarios
+		{
+			get
+			{
+				return this._TD_RolesxUsuarios;
+			}
+			set
+			{
+				this._TD_RolesxUsuarios.Assign(value);
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void attach_TD_Logins(TD_Login entity)
+		{
+			this.SendPropertyChanging();
+			entity.TM_Usuario = this;
+		}
+		
+		private void detach_TD_Logins(TD_Login entity)
+		{
+			this.SendPropertyChanging();
+			entity.TM_Usuario = null;
+		}
+		
+		private void attach_TD_RolesxUsuarios(TD_RolesxUsuario entity)
+		{
+			this.SendPropertyChanging();
+			entity.TM_Usuario = this;
+		}
+		
+		private void detach_TD_RolesxUsuarios(TD_RolesxUsuario entity)
+		{
+			this.SendPropertyChanging();
+			entity.TM_Usuario = null;
 		}
 	}
 }

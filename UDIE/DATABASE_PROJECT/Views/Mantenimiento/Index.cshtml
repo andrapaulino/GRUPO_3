@@ -1,4 +1,4 @@
-﻿@model capaModelo.V_Modelo.VM_Operaciones
+﻿@model capaModelo.V_Model.VM_Operaciones
 
 
 
@@ -17,11 +17,12 @@
     {
 
 
-    <div class="card" style="width: 20rem; height: 12rem;">
-        <div class="card-header">Titulo1</div>
+    <div class="card" style="width: 20rem; height: 12rem; margin-right> 2%;">
+        <div class="card-header">@items.DescripcionOperacion</div>
+        <a href="@items.enlace_OperacionSistema">
 
         <div class="card-body">
-            <h5 class="card-title">Descripcion</h5>
+            <h5 class="card-title">@items.comentarios</h5>
         </div>
     </div>
 
