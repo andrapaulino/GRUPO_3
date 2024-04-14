@@ -1,4 +1,7 @@
-﻿
+﻿@model capaModelo.V_Model.VM_Operaciones
+
+
+
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -6,6 +9,37 @@
 
 <h2>Mantenimiento de tablas</h2>
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+
+<div class="row">
+    @foreach(var items in Model._tblOperaciones)
+    {
+
+
+    <div class="card" style="width: 20rem; height: 12rem; margin-right> 2%;">
+        <div class="card-header">@items.DescripcionOperacion</div>
+        <a href="@items.enlace_OperacionSistema">
+
+        <div class="card-body">
+            <h5 class="card-title">@items.comentarios</h5>
+        </div>
+    </div>
+
+    }
+
+</div>
+
+
+
+
+
+=======
+>>>>>>> parent of e331717 (Bootstrap[CSS + JS(Bundle+Separate) + Card], etc...)
+>>>>>>> 0c2eb817ecdd768b7d994e4bce0cc53b0b168491
 <div class="col-lg-8">
      </div>
 
